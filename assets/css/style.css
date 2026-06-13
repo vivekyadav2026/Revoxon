@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--secondary-color);
 }
 
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white {
+    color: #ffffff !important;
+}
+
 /* Utilities */
 .text-primary-color { color: var(--primary-color) !important; }
 .text-secondary-color { color: var(--secondary-color) !important; }
@@ -156,6 +161,15 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1020;
 }
 
+/* Hero Slider */
+.hero-slide {
+    min-height: 80vh;
+}
+.hero-content {
+    min-height: 80vh;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
 /* Animations */
 .animation-fade-up {
     opacity: 0;
@@ -171,5 +185,98 @@ h1, h2, h3, h4, h5, h6 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+/* Tablet & Smaller */
+@media (max-width: 991.98px) {
+    /* Adjust Hero Carousel */
+    .hero-slide {
+        min-height: 60vh !important;
+    }
+    .hero-content {
+        min-height: 60vh !important;
+    }
+    
+    .hero-slide h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    /* Adjust Page Banner */
+    .page-banner {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Floating CTAs to avoid overlapping with Mobile Bottom Bar */
+    .floating-whatsapp {
+        bottom: 80px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .floating-call {
+        bottom: 140px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    /* Add padding to body so content doesn't hide behind mobile sticky bar */
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 767.98px) {
+    /* Reduce large section paddings */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Adjust Typography */
+    .display-4 { font-size: 2rem; }
+    .display-5 { font-size: 1.8rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    /* Center align text in footer on mobile */
+    .footer {
+        text-align: center;
+    }
+    
+    .footer .text-md-start, .footer .text-md-end {
+        text-align: center !important;
+    }
+    
+    .footer-links a:hover {
+        padding-left: 0;
+        color: var(--accent-color);
+    }
+    
+    .contact-info {
+        display: inline-block;
+        text-align: left;
+    }
+    
+    /* Improve Card margins for mobile */
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    /* Button sizes */
+    .btn-lg {
+        padding: 8px 20px;
+        font-size: 1rem;
     }
 }

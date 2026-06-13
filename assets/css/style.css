@@ -1,0 +1,175 @@
+/* 
+  Revoxon Industries - Global CSS 
+*/
+
+:root {
+    /* Brand Colors */
+    --primary-color: #0A4DA2;
+    --secondary-color: #1E293B;
+    --accent-color: #00AEEF;
+    --light-bg: #F8FAFC;
+    --text-color: #334155;
+    --text-muted: #64748B;
+    
+    /* Fonts */
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+}
+
+/* Utilities */
+.text-primary-color { color: var(--primary-color) !important; }
+.text-secondary-color { color: var(--secondary-color) !important; }
+.text-accent { color: var(--accent-color) !important; }
+
+.bg-primary-color { background-color: var(--primary-color) !important; }
+.bg-secondary-color { background-color: var(--secondary-color) !important; }
+.bg-accent { background-color: var(--accent-color) !important; }
+.bg-light-custom { background-color: var(--light-bg) !important; }
+
+.text-light-opacity { color: rgba(255, 255, 255, 0.7); }
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #083c80;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 77, 162, 0.2);
+}
+
+.btn-accent-custom {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-accent-custom:hover {
+    background-color: #008cc0;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 174, 239, 0.2);
+}
+
+/* Header */
+.header {
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 10px 15px !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Footer Links */
+.footer-links li {
+    margin-bottom: 10px;
+}
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+/* Floating CTAs */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: scale(1.1);
+}
+
+.floating-call {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.mobile-bottom-bar {
+    z-index: 1020;
+}
+
+/* Animations */
+.animation-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

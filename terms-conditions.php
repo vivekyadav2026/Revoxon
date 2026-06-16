@@ -13,21 +13,23 @@
                             <i class="fas fa-map-marker-alt text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Registered Address</span>
-                                <span class="text-muted small">338/01, Majara Chokdi, NH-48,<br>Vill &amp; Ta – Tajpur, Prantij,<br>Sabarkantha, Gujarat - 383205</span>
+                                <span class="text-muted small">338/01, Majara Chokdi, NH-48,<br>Vill &amp; Ta &ndash; Tajpur, Prantij,<br>Sabarkantha, Gujarat - 383205</span>
                             </div>
                         </li>
-                        <li class="d-flex mb-3 align-items-center">
-                            <i class="fas fa-phone-alt text-primary-color fs-5 me-3"></i>
+                        <li class="d-flex mb-3 align-items-start">
+                            <i class="fas fa-phone-alt text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Call Us</span>
-                                <span class="text-muted small">+91 98765 43210</span>
+                                <a href="tel:+919825706253" class="text-muted small text-decoration-none d-block mb-1">+91 98257 06253</a>
+                                <a href="tel:+919460861021" class="text-muted small text-decoration-none d-block mb-1">+91 94608 61021</a>
+                                <a href="tel:+918200945366" class="text-muted small text-decoration-none d-block">+91 82009 45366</a>
                             </div>
                         </li>
-                        <li class="d-flex align-items-center">
-                            <i class="fas fa-envelope text-primary-color fs-5 me-3"></i>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-envelope text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Email Support</span>
-                                <span class="text-muted small">info@revoxon.com</span>
+                                <a href="mailto:info@revoxon.com" class="text-muted small text-decoration-none d-block">info@revoxon.com</a>
                             </div>
                         </li>
                     </ul>

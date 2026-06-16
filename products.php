@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $page_title = "Products | Revoxon Industries Pvt. Ltd.";
 $page_description = "Explore Revoxon Industries' comprehensive range of PVC, UPVC, CPVC, SWR, and agriculture pipes along with premium construction chemicals.";
 include 'header.php';
@@ -33,7 +33,7 @@ include 'header.php';
                     <!-- Product 1 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/agri_pipes_product.png" class="card-img-top" alt="Agriculture Pipes">
+                            <img src="assets/images/product_with_company_name/agri_pipes_branded.jpeg" class="card-img-top" alt="Agriculture Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Agriculture Pipes</h4>
                                 <p class="card-text text-muted mb-4">High-pressure PVC pipes designed specifically for agricultural irrigation systems and water supply networks.</p>
@@ -44,7 +44,7 @@ include 'header.php';
                     <!-- Product 2 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/upvc_pipes_product.png" class="card-img-top" alt="UPVC Pipes">
+                            <img src="assets/images/product_with_company_name/upvc_pipes_branded.jpeg" class="card-img-top" alt="UPVC Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">UPVC Plumbing Pipes</h4>
                                 <p class="card-text text-muted mb-4">Lead-free, ASTM standard pipes ideal for cold water supply in residential and commercial buildings.</p>
@@ -55,7 +55,7 @@ include 'header.php';
                     <!-- Product 3 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/cpvc_pipes_product.png" class="card-img-top" alt="CPVC Pipes">
+                            <img src="assets/images/product_with_company_name/cpvc_pipes_branded.jpeg" class="card-img-top" alt="CPVC Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">CPVC Pipes</h4>
                                 <p class="card-text text-muted mb-4">Capable of withstanding temperatures up to 93°C, perfect for hot and cold water distribution.</p>
@@ -66,7 +66,7 @@ include 'header.php';
                     <!-- Product 4 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/swr_pipes_hero.png" class="card-img-top" alt="SWR Pipes">
+                            <img src="assets/images/product_with_company_name/swr_pipes_branded.jpeg" class="card-img-top" alt="SWR Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">SWR Pipes</h4>
                                 <p class="card-text text-muted mb-4">Soil, Waste, and Rainwater drainage systems featuring high impact strength and leak-proof joints.</p>
@@ -77,7 +77,7 @@ include 'header.php';
                     <!-- Product 5 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/casing_pipes_product.png" class="card-img-top" alt="Casing Pipes">
+                            <img src="assets/images/product_with_company_name/casing_pipes_branded.jpeg" class="card-img-top" alt="Casing Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Casing & Column Pipes</h4>
                                 <p class="card-text text-muted mb-4">Specially designed for borewell applications to prevent collapse and ensure clean water delivery.</p>
@@ -88,7 +88,7 @@ include 'header.php';
                     <!-- Product 6 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/conduit_pipes_hero.png" class="card-img-top" alt="Conduit Pipes">
+                            <img src="assets/images/revoxon_conduits.png" class="card-img-top" alt="Conduit Pipes" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Electrical Conduit Pipes</h4>
                                 <p class="card-text text-muted mb-4">Fire-retardant PVC conduits ensuring maximum safety for domestic and industrial wiring.</p>
@@ -99,7 +99,7 @@ include 'header.php';
                     <!-- Product 7 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/agri_fittings_product.png" class="card-img-top" alt="Fittings">
+                            <img src="assets/images/product_with_company_name/upvc_fittings_branded.jpeg" class="card-img-top" alt="Fittings" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Pipe Fittings</h4>
                                 <p class="card-text text-muted mb-4">A complete range of precision-engineered fittings including elbows, tees, couplers, and reducers.</p>
@@ -110,7 +110,7 @@ include 'header.php';
                     <!-- Product 8 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/solvent_cement_product.png" class="card-img-top" alt="Adhesives">
+                            <img src="assets/images/product_with_company_name/pvc_adhesive_branded.jpeg" class="card-img-top" alt="Adhesives" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Solvent Cements & Adhesives</h4>
                                 <p class="card-text text-muted mb-4">Heavy-duty solvent cements for permanent, leak-proof bonding of UPVC, CPVC, and PVC pipes.</p>
@@ -121,7 +121,7 @@ include 'header.php';
                     <!-- Product 9 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/construction_chemicals_product.png" class="card-img-top" alt="Construction Chemicals">
+                            <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" class="card-img-top" alt="Construction Chemicals" style="height: 250px; object-fit: cover;">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Construction Chemicals</h4>
                                 <p class="card-text text-muted mb-4">Premium waterproofing compounds and tile adhesives for modern construction requirements.</p>
@@ -178,9 +178,22 @@ include 'header.php';
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4 text-white">Contact Info</h5>
                     <ul class="list-unstyled contact-info">
-                        <li class="mb-3"><i class="fas fa-map-marker-alt text-accent me-3"></i> 338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</li>
-                        <li class="mb-3"><i class="fas fa-phone-alt text-accent me-3"></i> +91 98765 43210</li>
-                        <li class="mb-3"><i class="fas fa-envelope text-accent me-3"></i> info@revoxon.com</li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
+                            <span class="text-light-opacity">338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
+                            <div>
+                                <a href="tel:+919825706253" class="text-light-opacity text-decoration-none d-block mb-1">+91 98257 06253</a>
+                                <a href="tel:+919460861021" class="text-light-opacity text-decoration-none d-block mb-1">+91 94608 61021</a>
+                                <a href="tel:+918200945366" class="text-light-opacity text-decoration-none d-block">+91 82009 45366</a>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
+                            <a href="mailto:info@revoxon.com" class="text-light-opacity text-decoration-none">info@revoxon.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -198,19 +211,19 @@ include 'header.php';
     </footer>
 
     <!-- Floating CTAs -->
-    <a href="https://wa.me/919876543210" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/919825706253" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="tel:+919876543210" class="floating-call d-flex d-lg-none" title="Call Now">
+    <a href="tel:+919825706253" class="floating-call d-flex d-lg-none" title="Call Now">
         <i class="fas fa-phone-alt"></i>
     </a>
 
     <!-- Sticky Mobile Bottom Bar -->
     <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top">
-        <a href="tel:+919876543210" class="text-center text-decoration-none text-dark">
+        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919876543210" class="text-center text-decoration-none text-dark">
+        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal">

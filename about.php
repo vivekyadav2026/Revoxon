@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $page_title = "About Us | Revoxon Industries Pvt. Ltd.";
 $page_description = "Learn about Revoxon Industries Pvt. Ltd., our vision, mission, and our journey as a leading manufacturer of PVC and UPVC pipes in India.";
 include 'header.php';
@@ -90,19 +90,103 @@ include 'header.php';
             </div>
         </section>
 
-        <!-- Director Message -->
+        <!-- Leadership Section: Rasikbhai G. Patel - Chairman -->
         <section class="py-5 bg-white">
             <div class="container py-4">
-                <div class="row align-items-center bg-light-custom rounded shadow-sm overflow-hidden animate-on-scroll">
-                    <div class="col-md-5 p-0">
-                        <img src="assets/images/director.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Director" style="min-height: 400px;">
+                <div class="row align-items-center g-4 g-lg-5 animate-on-scroll">
+                    <div class="col-md-5 col-lg-4 text-center text-md-start">
+                        <img src="assets/images/chairman.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Rasikbhai G. Patel - Chairman" style="max-height: 480px; object-fit: contain;">
                     </div>
-                    <div class="col-md-7 p-5">
-                        <i class="fas fa-quote-left fs-1 text-accent opacity-50 mb-3"></i>
-                        <h3 class="fw-bold text-secondary-color mb-4">Message From The Director</h3>
-                        <p class="fst-italic text-muted mb-4 fs-5">"At Revoxon, our fundamental belief is that quality is not an act, it is a habit. We are dedicated to providing the Indian market with piping solutions that exceed international standards, empowering agriculture, and securing modern infrastructure."</p>
-                        <h5 class="fw-bold text-primary-color mb-0">Mr. John Doe</h5>
-                        <p class="text-muted mb-0">Managing Director, Revoxon Industries</p>
+                    <div class="col-md-7 col-lg-8">
+                        <div class="d-flex flex-column justify-content-center">
+                            <span class="badge bg-light text-accent border border-accent-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3" style="letter-spacing: 1.5px; font-size: 0.78rem; align-self: flex-start;">
+                                Chairman’s Message
+                            </span>
+                            <i class="fas fa-quote-left fs-1 text-primary-color opacity-25 d-block mb-3"></i>
+                            
+                            <div class="text-muted mb-4" style="line-height: 1.8; font-size: 1rem;">
+                                <p class="fw-bold text-primary-color mb-3">Dear Customers,</p>
+                                <p class="mb-3">It gives me immense pleasure to welcome you to <strong>Revoxon Industries Pvt. Ltd.</strong></p>
+                                <p class="mb-3">At Revoxon, we believe that excellence is driven by innovation, integrity, and an unwavering commitment to quality. Since our inception, our mission has been to deliver superior products and services that create lasting value for our customers, partners, employees, and society.</p>
+                                <p class="mb-3">In today’s dynamic business environment, adaptability and forward-thinking leadership are essential. We continuously invest in technology, talent, and sustainable practices to ensure that Revoxon remains at the forefront of industry advancement. Our success is built upon the trust of our customers, the dedication of our team, and the confidence of our stakeholders.</p>
+                                <p class="mb-3">As we look toward the future, we remain committed to strengthening our capabilities, expanding our reach, and embracing new opportunities for growth. We will continue to uphold the highest standards of professionalism, transparency, and corporate responsibility while striving to exceed expectations in every endeavor.</p>
+                                <p class="mb-3">I extend my sincere gratitude to our customers, business associates, employees, and stakeholders for their unwavering support and trust. Together, we will continue to build a stronger, more innovative, and sustainable future.</p>
+                                <p class="mb-0">Thank you for being a valued part of our journey.</p>
+                            </div>
+                            
+                            <div class="border-top pt-3">
+                                <h5 class="fw-bold text-secondary-color mb-1">Rasikbhai G. Patel</h5>
+                                <p class="text-accent fw-medium mb-0">Chairman</p>
+                                <p class="text-muted small mb-0">Revoxon Industries Pvt. Ltd.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section: Sunil Takhar - Chairman -->
+        <section class="py-5 bg-light-custom border-top border-bottom">
+            <div class="container py-4">
+                <div class="row align-items-center g-4 g-lg-5 animate-on-scroll">
+                    <div class="col-md-7 col-lg-8 order-2 order-md-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <span class="badge bg-light text-accent border border-accent-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3" style="letter-spacing: 1.5px; font-size: 0.78rem; align-self: flex-start;">
+                                Chairman’s Message
+                            </span>
+                            <i class="fas fa-quote-left fs-1 text-primary-color opacity-25 d-block mb-3"></i>
+                            
+                            <div class="text-muted mb-4" style="line-height: 1.8; font-size: 1rem;">
+                                <p class="fw-bold text-primary-color mb-3">Dear Customers,</p>
+                                <p class="mb-3">Welcome to <strong>Revoxon Industries Pvt. Ltd.</strong></p>
+                                <p class="mb-3">At Revoxon, we are driven by a simple yet powerful vision—to create innovative solutions, deliver exceptional quality, and build lasting relationships based on trust and integrity. Every step we take is guided by our commitment to excellence and our determination to exceed customer expectations.</p>
+                                <p class="mb-3">The foundation of our success lies in the confidence our customers place in us and the dedication of our talented team. As industries continue to evolve, we embrace change as an opportunity to innovate, improve, and create greater value for all our stakeholders.</p>
+                                <p class="mb-3">Our journey is not only about business growth but also about contributing positively to society through responsible practices, sustainable development, and ethical leadership. We remain focused on strengthening our capabilities, expanding our horizons, and setting new benchmarks of excellence.</p>
+                                <p class="mb-0">On behalf of the entire Revoxon family, I sincerely thank our customers, partners, employees, and well-wishers for their continued support and trust. Together, we will shape a future filled with opportunities, progress, and shared success.</p>
+                            </div>
+                            
+                            <div class="border-top pt-3">
+                                <h5 class="fw-bold text-secondary-color mb-1">Sunil Takhar</h5>
+                                <p class="text-accent fw-medium mb-0">Chairman</p>
+                                <p class="text-muted small mb-0">Revoxon Industries Pvt. Ltd.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 text-center text-md-end order-1 order-md-2">
+                        <img src="assets/images/chairman_sunil.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Sunil Takhar - Chairman" style="max-height: 480px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section: Parth R. Patel - Director -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row align-items-center g-4 g-lg-5 animate-on-scroll">
+                    <div class="col-md-5 col-lg-4 text-center text-md-start">
+                        <img src="assets/images/director_parth.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Parth R. Patel - Director" style="max-height: 480px; object-fit: contain;">
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <div class="d-flex flex-column justify-content-center">
+                            <span class="badge bg-light text-accent border border-accent-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3" style="letter-spacing: 1.5px; font-size: 0.78rem; align-self: flex-start;">
+                                Director’s Message
+                            </span>
+                            <i class="fas fa-quote-left fs-1 text-primary-color opacity-25 d-block mb-3"></i>
+                            
+                            <div class="text-muted mb-4" style="line-height: 1.8; font-size: 1rem;">
+                                <p class="fw-bold text-primary-color mb-3">Dear Customers and Partners,</p>
+                                <p class="mb-3">At <strong>Revoxon Industries Pvt. Ltd.</strong>, we are committed to delivering quality, innovation, and value in everything we do. Our journey has been driven by a passion for excellence and a dedication to meeting the evolving needs of our customers.</p>
+                                <p class="mb-3">We believe that sustainable growth is achieved through continuous improvement, technological advancement, and strong relationships built on trust and transparency. Every achievement of our company reflects the hard work of our team, the confidence of our customers, and the support of our business partners.</p>
+                                <p class="mb-3">As we move forward, we remain focused on enhancing our capabilities, expanding our market presence, and creating long-term value for all stakeholders. We are committed to maintaining the highest standards of professionalism while contributing positively to the industries and communities we serve.</p>
+                                <p class="mb-0">I sincerely thank our customers, employees, suppliers, and partners for their continued trust and support. Together, we will continue to build a stronger and more successful future.</p>
+                            </div>
+                            
+                            <div class="border-top pt-3">
+                                <h5 class="fw-bold text-secondary-color mb-1">Parth R. Patel</h5>
+                                <p class="text-accent fw-medium mb-0">Director</p>
+                                <p class="text-muted small mb-0">Revoxon Industries Pvt. Ltd.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,9 +303,22 @@ include 'header.php';
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4 text-white">Contact Info</h5>
                     <ul class="list-unstyled contact-info">
-                        <li class="mb-3"><i class="fas fa-map-marker-alt text-accent me-3"></i> 338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</li>
-                        <li class="mb-3"><i class="fas fa-phone-alt text-accent me-3"></i> +91 98765 43210</li>
-                        <li class="mb-3"><i class="fas fa-envelope text-accent me-3"></i> info@revoxon.com</li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
+                            <span class="text-light-opacity">338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
+                            <div>
+                                <a href="tel:+919825706253" class="text-light-opacity text-decoration-none d-block mb-1">+91 98257 06253</a>
+                                <a href="tel:+919460861021" class="text-light-opacity text-decoration-none d-block mb-1">+91 94608 61021</a>
+                                <a href="tel:+918200945366" class="text-light-opacity text-decoration-none d-block">+91 82009 45366</a>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
+                            <a href="mailto:info@revoxon.com" class="text-light-opacity text-decoration-none">info@revoxon.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -239,19 +336,19 @@ include 'header.php';
     </footer>
 
     <!-- Floating CTAs -->
-    <a href="https://wa.me/919876543210" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/919825706253" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="tel:+919876543210" class="floating-call d-flex d-lg-none" title="Call Now">
+    <a href="tel:+919825706253" class="floating-call d-flex d-lg-none" title="Call Now">
         <i class="fas fa-phone-alt"></i>
     </a>
 
     <!-- Sticky Mobile Bottom Bar -->
     <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top">
-        <a href="tel:+919876543210" class="text-center text-decoration-none text-dark">
+        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919876543210" class="text-center text-decoration-none text-dark">
+        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal">

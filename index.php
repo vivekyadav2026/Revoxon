@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $page_title = "Revoxon Industries Pvt. Ltd. | Premium PVC & UPVC Pipes Manufacturer";
 $page_description = "Revoxon Industries Pvt. Ltd. is a leading manufacturer of premium PVC Pipes, UPVC Pipes, CPVC Pipes, SWR Pipes, and Construction Chemicals in India.";
 include 'header.php';
@@ -145,7 +145,7 @@ include 'header.php';
                 <!-- Product Card 1 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll">
                     <a href="agriculture-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/agri_pipes_product.png" alt="Agriculture Pipes">
+                        <img src="assets/images/product_with_company_name/agri_pipes_branded.jpeg" alt="Agriculture Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">Agriculture Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">High-pressure irrigation solutions</p>
@@ -155,7 +155,7 @@ include 'header.php';
                 <!-- Product Card 2 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
                     <a href="upvc-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/upvc_pipes_product.png" alt="UPVC Pipes">
+                        <img src="assets/images/product_with_company_name/upvc_pipes_branded.jpeg" alt="UPVC Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">UPVC Plumbing Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">Lead-free ASTM standards</p>
@@ -165,7 +165,7 @@ include 'header.php';
                 <!-- Product Card 3 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
                     <a href="cpvc-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/cpvc_pipes_product.png" alt="CPVC Pipes">
+                        <img src="assets/images/product_with_company_name/cpvc_pipes_branded.jpeg" alt="CPVC Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">CPVC Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">Hot & cold water distribution</p>
@@ -175,7 +175,7 @@ include 'header.php';
                 <!-- Product Card 4 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
                     <a href="swr-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/swr_pipes_hero.png" alt="SWR Pipes">
+                        <img src="assets/images/product_with_company_name/swr_pipes_branded.jpeg" alt="SWR Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">SWR Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">Soil, waste & rainwater drainage</p>
@@ -185,7 +185,7 @@ include 'header.php';
                 <!-- Product Card 5 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll">
                     <a href="casing-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/casing_pipes_product.png" alt="Casing Pipes">
+                        <img src="assets/images/product_with_company_name/casing_pipes_branded.jpeg" alt="Casing Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">Casing & Column Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">Patented in-built locking system</p>
@@ -195,7 +195,7 @@ include 'header.php';
                 <!-- Product Card 6 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
                     <a href="conduit-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/conduit_pipes_hero.png" alt="Conduit Pipes">
+                        <img src="assets/images/revoxon_conduits.png" alt="Conduit Pipes" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">Electrical Conduit Pipes</h4>
                             <p class="small text-white-50 mb-0 mt-1">Fire-retardant safety conduits</p>
@@ -205,7 +205,7 @@ include 'header.php';
                 <!-- Product Card 7 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
                     <a href="fittings.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/agri_fittings_product.png" alt="Fittings">
+                        <img src="assets/images/product_with_company_name/upvc_fittings_branded.jpeg" alt="Fittings" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">Pipe Fittings</h4>
                             <p class="small text-white-50 mb-0 mt-1">Precision engineered joints</p>
@@ -215,7 +215,7 @@ include 'header.php';
                 <!-- Product Card 8 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
                     <a href="chemicals.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/construction_chemicals_product.png" alt="Chemicals">
+                        <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" alt="Chemicals" style="height: 100%; object-fit: cover;">
                         <div class="modern-product-card-overlay">
                             <h4 class="modern-product-card-title">Construction Chemicals</h4>
                             <p class="small text-white-50 mb-0 mt-1">Waterproofing & tile adhesives</p>
@@ -226,6 +226,36 @@ include 'header.php';
             
             <div class="text-center mt-5 animate-on-scroll">
                 <a href="products.php" class="btn btn-outline-primary btn-lg px-5">View All Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Quote Section -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container py-4">
+            <div class="row align-items-center g-4 g-lg-5 animate-on-scroll">
+                <div class="col-md-5 col-lg-4 text-center text-md-start">
+                    <img src="assets/images/chairman.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Rasikbhai G. Patel - Chairman" style="max-height: 480px; object-fit: contain;">
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <div class="d-flex flex-column justify-content-center">
+                        <span class="badge bg-light text-accent border border-accent-subtle px-3 py-2 rounded-pill fw-bold text-uppercase mb-3" style="letter-spacing: 1.5px; font-size: 0.78rem; align-self: flex-start;">
+                            Message From The Chairman
+                        </span>
+                        <i class="fas fa-quote-left fs-1 text-primary-color opacity-25 d-block mb-3"></i>
+                        <h2 class="fw-bold text-secondary-color mb-3" style="line-height: 1.3;">"At Revoxon, we believe that excellence is driven by innovation, integrity, and an unwavering commitment to quality."</h2>
+                        <p class="text-muted mb-4 fs-5" style="line-height: 1.7; font-size: 1rem !important;">
+                            Since our inception, our mission has been to deliver superior products and services that create lasting value for our customers, partners, employees, and society. We continuously invest in technology, talent, and sustainable practices to keep Revoxon at the forefront.
+                        </p>
+                        <div class="mb-4">
+                            <h5 class="fw-bold text-secondary-color mb-1">Rasikbhai G. Patel</h5>
+                            <p class="text-accent fw-semibold mb-0">Chairman, Revoxon Industries</p>
+                        </div>
+                        <div>
+                            <a href="about.php" class="btn btn-primary-custom">Read Full Leadership Message <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -278,12 +308,12 @@ include 'header.php';
                 <h2 class="fw-bold text-secondary-color">Our Photo Gallery</h2>
             </div>
             <div class="row g-4 mb-4">
-                <div class="col-md-4 col-sm-6 animate-on-scroll"><img src="assets/images/gallery_1.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
-                <div class="col-md-4 col-sm-6 animate-on-scroll delay-1"><img src="assets/images/gallery_2.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
-                <div class="col-md-4 col-sm-6 animate-on-scroll delay-2"><img src="assets/images/gallery_3.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
-                <div class="col-md-4 col-sm-6 animate-on-scroll"><img src="assets/images/gallery_4.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
-                <div class="col-md-4 col-sm-6 animate-on-scroll delay-1"><img src="assets/images/gallery_5.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
-                <div class="col-md-4 col-sm-6 animate-on-scroll delay-2"><img src="assets/images/gallery_6.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll"><img src="assets/images/product_with_company_name/all_pipes_range_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll delay-1"><img src="assets/images/product_with_company_name/all_products_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll delay-2"><img src="assets/images/product_with_company_name/pvc_adhesive_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll"><img src="assets/images/product_with_company_name/chemicals_grid_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll delay-1"><img src="assets/images/product_with_company_name/cpvc_fittings_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
+                <div class="col-md-4 col-sm-6 animate-on-scroll delay-2"><img src="assets/images/product_with_company_name/hdpe_pipes_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height:250px" alt="Gallery"></div>
             </div>
             <div class="text-center animate-on-scroll">
                 <a href="gallery.php" class="btn btn-primary-custom btn-lg">View Full Gallery <i class="fas fa-arrow-right ms-2"></i></a>
@@ -326,9 +356,22 @@ include 'header.php';
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4 text-white">Contact Info</h5>
                     <ul class="list-unstyled contact-info">
-                        <li class="mb-3"><i class="fas fa-map-marker-alt text-accent me-3"></i> 338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</li>
-                        <li class="mb-3"><i class="fas fa-phone-alt text-accent me-3"></i> +91 98765 43210</li>
-                        <li class="mb-3"><i class="fas fa-envelope text-accent me-3"></i> info@revoxon.com</li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
+                            <span class="text-light-opacity">338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
+                            <div>
+                                <a href="tel:+919825706253" class="text-light-opacity text-decoration-none d-block mb-1">+91 98257 06253</a>
+                                <a href="tel:+919460861021" class="text-light-opacity text-decoration-none d-block mb-1">+91 94608 61021</a>
+                                <a href="tel:+918200945366" class="text-light-opacity text-decoration-none d-block">+91 82009 45366</a>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
+                            <a href="mailto:info@revoxon.com" class="text-light-opacity text-decoration-none">info@revoxon.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -346,19 +389,19 @@ include 'header.php';
     </footer>
 
     <!-- Floating CTAs -->
-    <a href="https://wa.me/919876543210" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/919825706253" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="tel:+919876543210" class="floating-call d-flex d-lg-none" title="Call Now">
+    <a href="tel:+919825706253" class="floating-call d-flex d-lg-none" title="Call Now">
         <i class="fas fa-phone-alt"></i>
     </a>
 
     <!-- Sticky Mobile Bottom Bar -->
     <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top">
-        <a href="tel:+919876543210" class="text-center text-decoration-none text-dark">
+        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919876543210" class="text-center text-decoration-none text-dark">
+        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal">

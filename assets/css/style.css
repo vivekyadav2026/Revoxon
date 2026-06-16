@@ -847,15 +847,24 @@ a.dropdown-toggle::after {
         padding-bottom: 3rem !important;
     }
     
-    /* Hide Floating CTAs on Mobile/Tablet since the Mobile Bottom Bar is present */
-    .floating-whatsapp,
+    /* Allow Floating CTAs to float on Mobile/Tablet at standard offsets */
+    .floating-whatsapp {
+        display: flex !important;
+        bottom: 30px !important;
+    }
     .floating-call {
+        display: flex !important;
+        bottom: 100px !important;
+    }
+    
+    /* Hide the mobile bottom bar completely */
+    .mobile-bottom-bar {
         display: none !important;
     }
     
-    /* Add padding to body so content doesn't hide behind mobile sticky bar */
+    /* Remove body padding since there is no bottom bar */
     body {
-        padding-bottom: 60px;
+        padding-bottom: 0px !important;
     }
 }
 

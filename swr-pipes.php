@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $page_title = "SWR Pipes | Revoxon Industries Pvt. Ltd.";
 $page_description = "Learn about Revoxon Industries Pvt. Ltd., our vision, mission, and our journey as a leading manufacturer of PVC and UPVC pipes in India.";
 include 'header.php';
@@ -23,7 +23,7 @@ include 'header.php';
         <div class="container py-4">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
-                    <img src="assets/images/swr_pipes_hero.png" class="img-fluid rounded shadow w-100 object-fit-cover" style="height: 400px;" alt="SWR Pipes">
+                    <img src="assets/images/product_with_company_name/swr_pipes_branded.jpeg" class="img-fluid rounded shadow w-100 object-fit-cover" style="height: 400px;" alt="SWR Pipes">
                 </div>
                 <div class="col-lg-6 animate-on-scroll delay-1">
                     <h2 class="fw-bold text-secondary-color mb-3">SWR Pipes</h2>
@@ -44,10 +44,10 @@ include 'header.php';
                     <h3 class="fw-bold text-secondary-color mb-4">Product Showcase</h3>
                 </div>
                 <div class="col-md-6 animate-on-scroll">
-                    <img src="assets/images/swr_pipes_hero.png" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="SWR Pipes Showcase 1">
+                    <img src="assets/images/product_with_company_name/swr_pipes_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="SWR Pipes Showcase 1">
                 </div>
                 <div class="col-md-6 animate-on-scroll delay-1">
-                    <img src="assets/images/gallery_16.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="SWR Pipes Showcase 2">
+                    <img src="assets/images/product_with_company_name/swr_fittings_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="SWR Pipes Showcase 2">
                 </div>
             </div>
         </div>
@@ -213,9 +213,22 @@ include 'header.php';
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4 text-white">Contact Info</h5>
                     <ul class="list-unstyled contact-info">
-                        <li class="mb-3"><i class="fas fa-map-marker-alt text-accent me-3"></i> 338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</li>
-                        <li class="mb-3"><i class="fas fa-phone-alt text-accent me-3"></i> +91 98765 43210</li>
-                        <li class="mb-3"><i class="fas fa-envelope text-accent me-3"></i> info@revoxon.com</li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
+                            <span class="text-light-opacity">338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
+                            <div>
+                                <a href="tel:+919825706253" class="text-light-opacity text-decoration-none d-block mb-1">+91 98257 06253</a>
+                                <a href="tel:+919460861021" class="text-light-opacity text-decoration-none d-block mb-1">+91 94608 61021</a>
+                                <a href="tel:+918200945366" class="text-light-opacity text-decoration-none d-block">+91 82009 45366</a>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
+                            <a href="mailto:info@revoxon.com" class="text-light-opacity text-decoration-none">info@revoxon.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -233,19 +246,19 @@ include 'header.php';
     </footer>
 
     <!-- Floating CTAs -->
-    <a href="https://wa.me/919876543210" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/919825706253" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="tel:+919876543210" class="floating-call d-flex d-lg-none" title="Call Now">
+    <a href="tel:+919825706253" class="floating-call d-flex d-lg-none" title="Call Now">
         <i class="fas fa-phone-alt"></i>
     </a>
 
     <!-- Sticky Mobile Bottom Bar -->
     <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top">
-        <a href="tel:+919876543210" class="text-center text-decoration-none text-dark">
+        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919876543210" class="text-center text-decoration-none text-dark">
+        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal">

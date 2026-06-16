@@ -3,16 +3,16 @@
 */
 
 :root {
-    /* Brand Colors */
-    --primary-color: #0A4DA2;
-    --secondary-color: #1E293B;
-    --accent-color: #00AEEF;
+    /* Brand Colors (Updated for 2025 Premium Header Redesign) */
+    --primary-color: #0F4C81;   /* Premium B2B Blue */
+    --secondary-color: #102A43; /* Deep Slate Navy */
+    --accent-color: #FF6B35;    /* Modern Orange Accent */
     --light-bg: #F8FAFC;
     --text-color: #334155;
     --text-muted: #64748B;
     
-    /* Fonts */
-    --font-heading: 'Roboto', sans-serif;
+    /* Fonts (Manrope/Inter premium layout) */
+    --font-heading: 'Inter', 'Roboto', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
 
@@ -36,11 +36,14 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
 .text-primary-color { color: var(--primary-color) !important; }
 .text-secondary-color { color: var(--secondary-color) !important; }
 .text-accent { color: var(--accent-color) !important; }
+.text-navy-dark { color: var(--secondary-color) !important; }
+.text-orange-accent { color: var(--accent-color) !important; }
 
 .bg-primary-color { background-color: var(--primary-color) !important; }
 .bg-secondary-color { background-color: var(--secondary-color) !important; }
 .bg-accent { background-color: var(--accent-color) !important; }
 .bg-light-custom { background-color: var(--light-bg) !important; }
+.bg-slate-light { background-color: #F1F5F9 !important; }
 
 .text-light-opacity { color: rgba(255, 255, 255, 0.7); }
 
@@ -79,25 +82,49 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
     box-shadow: 0 4px 12px rgba(0, 174, 239, 0.2);
 }
 
-/* Header */
+/* Header Overhaul */
 .header {
-    transition: all 0.3s ease;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E2E8F0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1030;
 }
 
 .header.scrolled {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-shadow: 0 4px 20px -2px rgba(16, 42, 67, 0.08) !important;
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
 }
 
-.navbar-nav .nav-link {
-    color: var(--secondary-color);
+/* Slim 32px Topbar Utility */
+.topbar-utility {
+    font-size: 0.8rem;
     font-weight: 500;
-    padding: 10px 15px !important;
-    transition: color 0.3s ease;
+    color: #64748B;
+    background-color: #F8FAFC !important;
+    border-bottom: 1px solid #E2E8F0;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+.topbar-utility a {
+    color: #64748B;
+    transition: color 0.2s ease;
+}
+
+.topbar-utility a:hover {
     color: var(--primary-color);
+}
+
+.topbar-social-link {
+    color: #64748B;
+    transition: color 0.2s ease;
+}
+
+.topbar-social-link:hover {
+    color: var(--accent-color) !important;
 }
 
 /* Footer Links */
@@ -141,7 +168,7 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
 
 .floating-call {
     position: fixed;
-    bottom: 100px;
+    bottom: 110px;
     right: 30px;
     background-color: var(--primary-color);
     color: white;
@@ -157,17 +184,551 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
     transition: all 0.3s ease;
 }
 
-.mobile-bottom-bar {
-    z-index: 1020;
+.floating-call i {
+    display: inline-block;
+    transform: rotate(0deg);
 }
 
-/* Hero Slider */
-.hero-slide {
-    min-height: 80vh;
+
+.mobile-bottom-bar {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+    background-color: #ffffff;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08) !important;
 }
-.hero-content {
-    min-height: 80vh;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+
+/* Hero Slider Overhaul */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 550px; /* Modern desktop height */
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center right; /* Keeps products on the right side visible */
+    z-index: 1;
+}
+
+/* Glassmorphism/Gradient Overlay for Contrast */
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sleek slate-900 gradient fading out towards the right */
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.5) 45%, rgba(15, 23, 42, 0.1) 75%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
+}
+
+/* Hero Badge */
+.hero-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #E63946; /* Premium Red Accent */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.hero-badge::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #E63946;
+    border-radius: 50%;
+}
+
+/* Hero Text & Typography */
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheading {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 550px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern Product Card */
+.modern-product-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 350px;
+    display: block;
+    text-decoration: none;
+}
+.modern-product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.modern-product-card:hover img {
+    transform: scale(1.05);
+}
+.modern-product-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    transition: background 0.3s ease;
+}
+.modern-product-card:hover .modern-product-card-overlay {
+    background: linear-gradient(to top, rgba(10, 77, 162, 0.9), transparent);
+}
+.modern-product-card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Big Stats */
+.stat-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+/* Dark Section */
+.dark-section {
+    background-color: #1E293B;
+    color: white;
+}
+.dark-feature-card {
+    background: #0A4DA2; /* primary color */
+    padding: 2rem;
+    height: 100%;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.dark-feature-card:hover {
+    transform: translateY(-5px);
+    background: #00AEEF; /* accent color */
+}
+
+/* Navbar Improvements */
+.navbar-brand span.fs-4 {
+    font-size: 1.25rem !important;
+}
+
+.navbar-nav .nav-link {
+    white-space: nowrap !important;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    padding: 10px 18px !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Nav Underline Slide Animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Get Free Quote CTA Button */
+.btn-get-quote {
+    white-space: nowrap;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF885B 100%);
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 12px; /* 12px rounded as requested */
+    border: none;
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-get-quote:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(135deg, #FF571A 0%, #FF7B4C 100%);
+}
+
+.search-toggle-btn {
+    color: var(--secondary-color) !important;
+    transition: color 0.2s ease;
+}
+
+.search-toggle-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    border-radius: 12px !important;
+    padding: 12px 6px !important;
+    animation: dropdownSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-toggle:hover .dropdown-arrow-icon,
+.dropdown-toggle.show .dropdown-arrow-icon {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        margin-top: 0;
+    }
+    .navbar-nav .nav-item.dropdown:hover .dropdown-toggle .dropdown-arrow-icon {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes dropdownSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Premium Slider Buttons */
+.btn-hero-primary {
+    position: relative;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #e0531c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff !important;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.25);
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.btn-hero-primary::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.45);
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-primary:hover::after {
+    transform: scaleX(1);
+}
+
+.btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff !important;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.btn-hero-secondary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--secondary-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Text Gradient Utility */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Decorative Dots Pattern */
+.dots-accent-bg {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(var(--accent-color) 20%, transparent 20%);
+    background-size: 14px 14px;
+    opacity: 0.12;
+    z-index: 0;
+}
+
+/* Premium Image Wrapper */
+.premium-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(16, 42, 67, 0.12);
+    z-index: 1;
+}
+
+.premium-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+/* Premium Stats Card Section */
+.premium-stat-card {
+    background: #ffffff;
+    border: 1px solid rgba(16, 42, 67, 0.08);
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 30px -10px rgba(16, 42, 67, 0.06);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.premium-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(15, 76, 129, 0.15);
+    border-color: rgba(15, 76, 129, 0.15);
+}
+
+.premium-stat-card:hover::before {
+    transform: scaleY(1);
+}
+
+.premium-stat-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 76, 129, 0.06) 0%, rgba(255, 107, 53, 0.06) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    color: var(--primary-color);
+}
+
+.premium-stat-card:hover .premium-stat-icon-wrap {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: #ffffff !important;
+}
+
+.premium-stat-card:hover .premium-stat-icon-wrap i {
+    color: #ffffff !important;
+}
+
+.premium-stat-card .stat-number {
+    font-size: 2.6rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.premium-stat-card .stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+}
+
+
+/* Navbar Responsive Fixes */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-nav .nav-link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 0.9rem;
+    }
+    .navbar-brand span.fs-4 {
+        font-size: 1.1rem !important;
+    }
+    .btn-get-quote {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Toggler and Menu Drawer Styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 30px;
+        border-bottom: 1px solid #E2E8F0;
+        box-shadow: 0 10px 20px rgba(16, 42, 67, 0.05);
+        max-height: 85vh;
+        overflow-y: auto;
+        border-radius: 0 0 12px 12px;
+        z-index: 100;
+    }
+    .navbar-nav .nav-link {
+        padding: 12px 10px !important;
+        border-bottom: 1px solid #F1F5F9;
+        font-size: 1.05rem;
+    }
+    .navbar-nav .nav-link::after {
+        display: none !important; /* Disable underlines on mobile */
+    }
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        background-color: #F8FAFC !important;
+        border-left: 3px solid var(--primary-color) !important;
+        border-radius: 6px !important;
+        padding: 8px 15px !important;
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+        transform: none !important;
+        animation: none !important;
+        display: none;
+    }
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    .navbar-nav .dropdown-item {
+        padding: 10px 12px !important;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #E2E8F0;
+        color: var(--secondary-color) !important;
+        background: transparent !important;
+    }
+    .navbar-nav .dropdown-item:hover,
+    .navbar-nav .dropdown-item.active {
+        color: var(--primary-color) !important;
+        padding-left: 18px !important;
+        transition: all 0.2s ease;
+    }
+    .navbar-nav .dropdown-item:last-child {
+        border-bottom: none;
+    }
+    .navbar-nav .dropdown-divider {
+        display: none !important;
+    }
+    .btn-get-quote {
+        margin-top: 15px;
+        width: 100%;
+        padding: 12px 24px;
+        border-radius: 12px;
+    }
 }
 
 /* Animations */
@@ -196,14 +757,14 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
 @media (max-width: 991.98px) {
     /* Adjust Hero Carousel */
     .hero-slide {
-        min-height: 60vh !important;
-    }
-    .hero-content {
-        min-height: 60vh !important;
+        height: 480px !important;
     }
     
-    .hero-slide h1 {
-        font-size: 2.5rem !important;
+    .hero-heading {
+        font-size: 2.6rem !important;
+    }
+    .hero-subheading {
+        font-size: 1.05rem !important;
     }
     
     /* Adjust Page Banner */
@@ -212,21 +773,10 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
         padding-bottom: 3rem !important;
     }
     
-    /* Floating CTAs to avoid overlapping with Mobile Bottom Bar */
-    .floating-whatsapp {
-        bottom: 80px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-    }
-    
+    /* Hide Floating CTAs on Mobile/Tablet since the Mobile Bottom Bar is present */
+    .floating-whatsapp,
     .floating-call {
-        bottom: 140px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        display: none !important;
     }
     
     /* Add padding to body so content doesn't hide behind mobile sticky bar */
@@ -279,4 +829,54 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
         padding: 8px 20px;
         font-size: 1rem;
     }
+    
+    /* Responsive Slider details for Mobile */
+    .hero-slide {
+        height: 400px !important;
+        background-position: center center !important;
+    }
+    .hero-slide::before {
+        background: rgba(15, 23, 42, 0.75) !important; /* Even overlay on mobile for high legibility */
+    }
+    .hero-heading {
+        font-size: 2rem !important;
+    }
+    .btn-hero-primary, .btn-hero-secondary {
+        padding: 12px 26px;
+        font-size: 0.82rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 12px;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+}
+
+/* Product Specifications Nav Tabs */
+#specTabs .nav-link {
+    color: var(--secondary-color);
+    background-color: #ffffff;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+#specTabs .nav-link.active {
+    color: #ffffff !important;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* SWR Pane Text Visibility Fix */
+#swr-fittings-pane table, 
+#swr-fittings-pane table th, 
+#swr-fittings-pane table td,
+#swr-fittings-pane table strong {
+    color: #102A43 !important; /* Deep Slate Navy for high legibility */
+}
+
+#swr-fittings-pane .card-body h4 {
+    color: #102A43 !important;
+}
+
+#swr-fittings-pane .card-body p,
+#swr-fittings-pane .card-body li {
+    color: #334155 !important; /* Dark Slate Gray */
 }

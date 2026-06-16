@@ -89,7 +89,6 @@ include 'header.php';
                             "swr_pipes_branded.jpeg" => "Revoxon SWR Pipes",
                             "agri_pipes_branded_2.jpeg" => "Revoxon Agriculture Pipes",
                             "agri_pipes_branded.jpeg" => "Revoxon Agriculture Pipes Range",
-                            "agri_pipes_branded.jpeg" => "Revoxon Agriculture Pipes Showcase",
                             "all_products_branded.jpeg" => "Revoxon Complete Product Range",
                             "swr_fittings_branded.jpeg" => "Revoxon SWR Fittings",
                             "all_products_branded_2.jpeg" => "Revoxon All Products Collection",

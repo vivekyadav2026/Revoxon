@@ -424,8 +424,12 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
     animation: dropdownSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle::after,
+.nav-link.dropdown-toggle::after,
+a.dropdown-toggle::after {
     display: none !important;
+    content: none !important;
+    border: none !important;
 }
 
 .dropdown-toggle:hover .dropdown-arrow-icon,

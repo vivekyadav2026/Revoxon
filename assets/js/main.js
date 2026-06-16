@@ -42,57 +42,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     animateElements.forEach(el => observer.observe(el));
 
-    // Fix for Bootstrap Dropdown Parent Click & Touch Toggle
-    const dropdownLinks = document.querySelectorAll('.dropdown-toggle');
-    
-    function initDropdowns() {
-        dropdownLinks.forEach(link => {
-            // Clone the link to remove all existing event listeners and avoid duplicates
-            const newLink = link.cloneNode(true);
-            link.parentNode.replaceChild(newLink, link);
-            
-            if (window.innerWidth < 992) {
-                // Mobile behavior
-                newLink.removeAttribute('data-bs-toggle');
-                
-                newLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const dropdownMenu = this.nextElementSibling;
-                    if (dropdownMenu) {
-                        const isShown = dropdownMenu.classList.contains('show');
-                        
-                        // Toggle this dropdown
-                        if (isShown) {
-                            dropdownMenu.classList.remove('show');
-                            this.classList.remove('show');
-                            this.setAttribute('aria-expanded', 'false');
-                        } else {
-                            dropdownMenu.classList.add('show');
-                            this.classList.add('show');
-                            this.setAttribute('aria-expanded', 'true');
-                        }
-                    }
-                });
-            } else {
-                // Desktop behavior (handled via pure CSS hover, click navigates directly)
-                newLink.setAttribute('data-bs-toggle', 'dropdown');
-                
-                newLink.addEventListener('click', function(e) {
-                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
-                        window.location.href = this.getAttribute('href');
-                    }
-                });
+    // Fix for Bootstrap Dropdown Parent Click & Touch Toggle (Safe, crash-free implementation)
+    function handleDropdownClick(e) {
+        if (window.innerWidth >= 992) {
+            // On desktop, navigate directly
+            if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                window.location.href = this.getAttribute('href');
             }
+        } else {
+            // On mobile, override Bootstrap and toggle inline dropdown menu
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+            const dropdownMenu = this.nextElementSibling;
+            if (dropdownMenu) {
+                const isShown = dropdownMenu.classList.contains('show');
+                
+                // Toggle this dropdown menu
+                if (isShown) {
+                    dropdownMenu.classList.remove('show');
+                    this.classList.remove('show');
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    dropdownMenu.classList.add('show');
+                    this.classList.add('show');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            }
+        }
+    }
+
+    function initDropdowns() {
+        const dropdownLinks = document.querySelectorAll('.dropdown-toggle');
+        dropdownLinks.forEach(link => {
+            if (window.innerWidth < 992) {
+                link.removeAttribute('data-bs-toggle');
+            } else {
+                link.setAttribute('data-bs-toggle', 'dropdown');
+            }
+            // Clear existing bindings first to prevent multiple click events
+            link.removeEventListener('click', handleDropdownClick);
+            link.addEventListener('click', handleDropdownClick);
         });
     }
 
-    // Run on load and on resize
+    // Run on load and on resize safely
     initDropdowns();
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(initDropdowns, 200);
+        resizeTimer = setTimeout(initDropdowns, 150);
     });
 });

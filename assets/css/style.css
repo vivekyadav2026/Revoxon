@@ -646,6 +646,48 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
 }
 
 
+/* Premium Page Banner Styling */
+.page-banner {
+    position: relative;
+    padding: 80px 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    overflow: hidden;
+}
+.page-banner h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+.page-banner .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.page-banner .breadcrumb-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.page-banner .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    transition: all 0.3s ease;
+}
+.page-banner .breadcrumb-item a:hover {
+    color: #ffffff !important;
+}
+.page-banner .breadcrumb-item.active {
+    color: var(--accent-color) !important;
+}
+.page-banner .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.55) !important;
+    content: "/" !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
 /* Navbar Responsive Fixes */
 @media (min-width: 992px) and (max-width: 1199px) {
     .navbar-nav .nav-link {

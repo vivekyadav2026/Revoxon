@@ -122,7 +122,7 @@ include 'header.php';
                     <div class="position-relative">
                         <div class="dots-accent-bg d-none d-md-block"></div>
                         <div class="premium-image-wrapper">
-                            <img src="assets/images/gallery_17.jpeg" class="img-fluid w-100 object-fit-cover" style="height: 500px;" alt="Company Innovation">
+                            <img src="assets/images/factory.png" class="img-fluid w-100 object-fit-cover" style="height: 500px;" alt="Manufacturing Unit">
                         </div>
                     </div>
                 </div>
@@ -142,45 +142,84 @@ include 'header.php';
             </div>
             
             <div class="row g-4">
+                <!-- Product Card 1 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll">
                     <a href="agriculture-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_7.jpeg" alt="Agriculture Pipes">
-                        
+                        <img src="assets/images/agri_pipes_product.png" alt="Agriculture Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">Agriculture Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">High-pressure irrigation solutions</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 2 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
                     <a href="upvc-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_10.jpeg" alt="UPVC Pipes">
+                        <img src="assets/images/upvc_pipes_product.png" alt="UPVC Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">UPVC Plumbing Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Lead-free ASTM standards</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 3 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
                     <a href="cpvc-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_13.jpeg" alt="CPVC Pipes">
+                        <img src="assets/images/cpvc_pipes_product.png" alt="CPVC Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">CPVC Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Hot & cold water distribution</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 4 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
                     <a href="swr-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_16.jpeg" alt="SWR Pipes">
+                        <img src="assets/images/swr_pipes_hero.png" alt="SWR Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">SWR Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Soil, waste & rainwater drainage</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 5 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll">
                     <a href="casing-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_19.jpeg" alt="Casing Pipes">
+                        <img src="assets/images/casing_pipes_product.png" alt="Casing Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">Casing & Column Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Patented in-built locking system</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 6 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
                     <a href="conduit-pipes.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_22.jpeg" alt="Conduit Pipes">
+                        <img src="assets/images/conduit_pipes_hero.png" alt="Conduit Pipes">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">Electrical Conduit Pipes</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Fire-retardant safety conduits</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 7 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
                     <a href="fittings.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_25.jpeg" alt="Fittings">
+                        <img src="assets/images/agri_fittings_product.png" alt="Fittings">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">Pipe Fittings</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Precision engineered joints</p>
+                        </div>
                     </a>
                 </div>
+                <!-- Product Card 8 -->
                 <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
                     <a href="chemicals.php" class="modern-product-card shadow-sm">
-                        <img src="assets/images/gallery_31.jpeg" alt="Chemicals">
+                        <img src="assets/images/construction_chemicals_product.png" alt="Chemicals">
+                        <div class="modern-product-card-overlay">
+                            <h4 class="modern-product-card-title">Construction Chemicals</h4>
+                            <p class="small text-white-50 mb-0 mt-1">Waterproofing & tile adhesives</p>
+                        </div>
                     </a>
                 </div>
             </div>

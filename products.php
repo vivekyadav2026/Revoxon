@@ -44,7 +44,7 @@ include 'header.php';
                     <!-- Product 2 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="UPVC Pipes">
+                            <img src="assets/images/upvc_pipes_product.png" class="card-img-top" alt="UPVC Pipes">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">UPVC Plumbing Pipes</h4>
                                 <p class="card-text text-muted mb-4">Lead-free, ASTM standard pipes ideal for cold water supply in residential and commercial buildings.</p>
@@ -55,7 +55,7 @@ include 'header.php';
                     <!-- Product 3 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="CPVC Pipes">
+                            <img src="assets/images/cpvc_pipes_product.png" class="card-img-top" alt="CPVC Pipes">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">CPVC Pipes</h4>
                                 <p class="card-text text-muted mb-4">Capable of withstanding temperatures up to 93°C, perfect for hot and cold water distribution.</p>
@@ -66,7 +66,7 @@ include 'header.php';
                     <!-- Product 4 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="SWR Pipes">
+                            <img src="assets/images/swr_pipes_hero.png" class="card-img-top" alt="SWR Pipes">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">SWR Pipes</h4>
                                 <p class="card-text text-muted mb-4">Soil, Waste, and Rainwater drainage systems featuring high impact strength and leak-proof joints.</p>
@@ -77,7 +77,7 @@ include 'header.php';
                     <!-- Product 5 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="Casing Pipes">
+                            <img src="assets/images/casing_pipes_product.png" class="card-img-top" alt="Casing Pipes">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Casing & Column Pipes</h4>
                                 <p class="card-text text-muted mb-4">Specially designed for borewell applications to prevent collapse and ensure clean water delivery.</p>
@@ -88,7 +88,7 @@ include 'header.php';
                     <!-- Product 6 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="Conduit Pipes">
+                            <img src="assets/images/conduit_pipes_hero.png" class="card-img-top" alt="Conduit Pipes">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Electrical Conduit Pipes</h4>
                                 <p class="card-text text-muted mb-4">Fire-retardant PVC conduits ensuring maximum safety for domestic and industrial wiring.</p>
@@ -110,7 +110,7 @@ include 'header.php';
                     <!-- Product 8 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="Adhesives">
+                            <img src="assets/images/solvent_cement_product.png" class="card-img-top" alt="Adhesives">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Solvent Cements & Adhesives</h4>
                                 <p class="card-text text-muted mb-4">Heavy-duty solvent cements for permanent, leak-proof bonding of UPVC, CPVC, and PVC pipes.</p>
@@ -121,7 +121,7 @@ include 'header.php';
                     <!-- Product 9 -->
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
                         <div class="card h-100 border-0 shadow-sm product-card">
-                            <img src="assets/images/products.png" class="card-img-top" alt="Construction Chemicals">
+                            <img src="assets/images/construction_chemicals_product.png" class="card-img-top" alt="Construction Chemicals">
                             <div class="card-body p-4">
                                 <h4 class="card-title fw-bold text-primary-color mb-3">Construction Chemicals</h4>
                                 <p class="card-text text-muted mb-4">Premium waterproofing compounds and tile adhesives for modern construction requirements.</p>

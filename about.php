@@ -95,14 +95,7 @@ include 'header.php';
         <!-- Leadership Section -->
         <section id="leadership-section" class="py-5 chairman-section border-bottom">
             <div class="container py-4">
-                <div id="aboutLeadershipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                    <!-- Indicators -->
-                    <div class="carousel-indicators position-relative mt-0 mb-4 justify-content-center justify-content-md-start ps-md-4" style="z-index: 10;">
-                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    
+                <div id="aboutLeadershipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                     <div class="carousel-inner">
                         <!-- Slide 1: Rasikbhai G. Patel -->
                         <div class="carousel-item active">
@@ -222,6 +215,13 @@ include 'header.php';
                         </div>
                     </div>
                     
+                    <!-- Indicators placed at the bottom -->
+                    <div class="carousel-indicators position-relative mt-5 mb-0 justify-content-center" style="z-index: 10;">
+                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
                     <!-- Carousel Navigation Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#aboutLeadershipCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -312,73 +312,52 @@ include 'header.php';
         </section>
     </main>
 
-    <!-- Script to handle sliding and custom 3s smooth scroll to specific leader based on URL hash -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Custom smooth scroll function taking 3000ms (3 seconds)
+        // Custom smooth scroll function using jQuery for guaranteed timing (4000ms / 4 seconds)
         function slowScrollTo(element, duration) {
-            var targetPosition = element.getBoundingClientRect().top + window.pageYOffset - 110;
-            var startPosition = window.pageYOffset;
-            var distance = targetPosition - startPosition;
-            var startTime = null;
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                var timeElapsed = currentTime - startTime;
-                var run = ease(timeElapsed, startPosition, distance, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                } else {
-                    window.scrollTo(0, targetPosition);
-                }
-            }
-
-            // Quadratic easing in/out
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-
-            requestAnimationFrame(animation);
+            var targetPosition = $(element).offset().top - 110;
+            
+            // Force disable CSS smooth scroll which conflicts with jQuery animate
+            $('html').css('scroll-behavior', 'auto');
+            
+            $('html, body').animate({
+                scrollTop: targetPosition
+            }, duration, 'linear', function() {
+                // Restore original CSS smooth scroll behavior
+                $('html').css('scroll-behavior', 'smooth');
+            });
         }
 
-        function handleHash() {
-            var hash = window.location.hash;
+        function handleLeaderParam() {
+            var params = new URLSearchParams(window.location.search);
+            var leader = params.get('leader');
+            
             var carouselEl = document.getElementById('aboutLeadershipCarousel');
-            if (carouselEl && hash) {
+            if (carouselEl && leader) {
                 var slideIndex = -1;
-                if (hash === '#rasikbhai') slideIndex = 0;
-                else if (hash === '#sunil') slideIndex = 1;
-                else if (hash === '#parth') slideIndex = 2;
+                if (leader === 'rasikbhai') slideIndex = 0;
+                else if (leader === 'sunil') slideIndex = 1;
+                else if (leader === 'parth') slideIndex = 2;
                 
                 if (slideIndex !== -1) {
                     // Switch carousel slide
                     var carousel = bootstrap.Carousel.getInstance(carouselEl) || new bootstrap.Carousel(carouselEl);
                     carousel.to(slideIndex);
                     
-                    // Smooth scroll down slowly (3000ms duration)
+                    // Smooth scroll down slowly (4000ms duration)
                     var targetSection = document.getElementById('leadership-section');
                     if (targetSection) {
                         setTimeout(function() {
-                            slowScrollTo(targetSection, 3000);
-                        }, 200);
+                            slowScrollTo(targetSection, 4000);
+                        }, 150);
                     }
                 }
             }
         }
         
-        // If hash exists on load, prevent default browser immediate jump by scrolling to top first
-        if (window.location.hash) {
-            window.scrollTo(0, 0);
-            setTimeout(handleHash, 100);
-        } else {
-            handleHash();
-        }
-        
-        window.addEventListener("hashchange", handleHash);
+        // Execute immediately
+        handleLeaderParam();
     });
     </script>
 

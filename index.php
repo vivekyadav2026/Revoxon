@@ -423,12 +423,6 @@ include 'header.php';
     <section class="py-5 chairman-section border-bottom">
         <div class="container py-4">
             <div id="leadershipCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-                <!-- Indicators -->
-                <div class="carousel-indicators position-relative mt-0 mb-4 justify-content-center justify-content-md-start ps-md-4" style="z-index: 10;">
-                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
                 
                 <div class="carousel-inner">
                     <!-- Slide 1: Rasikbhai G. Patel -->
@@ -456,9 +450,9 @@ include 'header.php';
                                             <h5 class="chairman-name mb-0">Rasikbhai G. Patel</h5>
                                             <p class="chairman-title mb-0">Chairman, Revoxon Industries</p>
                                         </div>
-                                        <a href="about.php#rasikbhai" class="btn-chairman-more">
-                                            About Leader <i class="fas fa-arrow-right ms-2"></i>
-                                        </a>
+                                            <a href="about.php?leader=rasikbhai" class="btn-chairman-more">
+                                                About Leader <i class="fas fa-arrow-right ms-2"></i>
+                                            </a>
                                     </div>
                                 </div>
                             </div>
@@ -490,9 +484,9 @@ include 'header.php';
                                             <h5 class="chairman-name mb-0">Sunil Takhar</h5>
                                             <p class="chairman-title mb-0">Chairman, Revoxon Industries</p>
                                         </div>
-                                        <a href="about.php#sunil" class="btn-chairman-more">
-                                            About Leader <i class="fas fa-arrow-right ms-2"></i>
-                                        </a>
+                                            <a href="about.php?leader=sunil" class="btn-chairman-more">
+                                                About Leader <i class="fas fa-arrow-right ms-2"></i>
+                                            </a>
                                     </div>
                                 </div>
                             </div>
@@ -524,7 +518,7 @@ include 'header.php';
                                             <h5 class="chairman-name mb-0">Parth R. Patel</h5>
                                             <p class="chairman-title mb-0">Director, Revoxon Industries</p>
                                         </div>
-                                        <a href="about.php#parth" class="btn-chairman-more">
+                                        <a href="about.php?leader=parth" class="btn-chairman-more">
                                             About Leader <i class="fas fa-arrow-right ms-2"></i>
                                         </a>
                                     </div>
@@ -532,6 +526,13 @@ include 'header.php';
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Indicators placed at the bottom -->
+                <div class="carousel-indicators position-relative mt-4 mb-0 justify-content-center" style="z-index: 10;">
+                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#leadershipCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 
                 <!-- Carousel Navigation Controls -->

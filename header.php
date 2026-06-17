@@ -48,8 +48,8 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
         <div class="container-fluid px-xl-5 px-3">
             <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <a class="navbar-brand d-flex align-items-center" href="index.php">
-                    <img src="assets/images/logo/logo.jpeg" alt="Revoxon Industries" style="height: 50px; border-radius: 4px;" class="me-2">
-                    <span class="fw-bold fs-4 text-navy-dark d-none d-sm-inline"><span class="text-orange-accent">REVOXON</span> INDUSTRIES</span>
+                    <img src="assets/images/logo/logo.jpeg" alt="Revoxon Industries" style="border-radius: 4px;" class="me-2 brand-logo-img">
+                    <span class="fw-bold text-navy-dark brand-name-text"><span class="text-orange-accent">REVOXON</span> INDUSTRIES</span>
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,8 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header border-bottom d-flex d-lg-none">
                         <a class="navbar-brand d-flex align-items-center" href="index.php">
-                            <img src="assets/images/logo/logo.jpeg" alt="Revoxon Industries" style="height: 40px; border-radius: 4px;" class="me-2">
+                            <img src="assets/images/logo/logo.jpeg" alt="Revoxon Industries" style="border-radius: 4px;" class="me-2 brand-logo-img">
+                            <span class="fw-bold text-navy-dark brand-name-text"><span class="text-orange-accent">REVOXON</span> INDUSTRIES</span>
                         </a>
                         <button type="button" class="btn-close-custom text-dark" data-bs-dismiss="offcanvas" aria-label="Close" style="background:none; border:none; font-size: 24px;">
                             <i class="fas fa-times"></i>

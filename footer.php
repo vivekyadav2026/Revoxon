@@ -129,7 +129,7 @@
     </footer>
 
     <!-- Floating CTAs (Desktop Only) -->
-    <a href="https://wa.me/919825706253" class="floating-whatsapp d-none d-lg-flex" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/919460861021" class="floating-whatsapp d-none d-lg-flex" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -138,7 +138,7 @@
         <a href="tel:+919825706253" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
+        <a href="https://wa.me/919460861021" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal" style="font-family: var(--font-body); font-size: 13px;">

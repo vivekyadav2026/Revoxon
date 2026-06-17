@@ -127,8 +127,41 @@ include 'header.php';
             if(contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    alert('Thank you! Your message has been sent successfully.');
-                    contactForm.reset();
+                    
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+                    const formData = new FormData();
+                    formData.append('form_type', 'contact');
+                    formData.append('name', document.getElementById('name').value);
+                    formData.append('email', document.getElementById('email').value);
+                    formData.append('phone', document.getElementById('phone').value);
+                    formData.append('subject', document.getElementById('subject').value);
+                    formData.append('message', document.getElementById('message').value);
+
+                    fetch('send-mail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data.status === 'success') {
+                            alert(data.message);
+                            contactForm.reset();
+                        } else {
+                            alert('Error: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Something went wrong. Please try again.');
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
                 });
             }
         });

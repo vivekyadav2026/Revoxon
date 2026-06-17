@@ -120,6 +120,7 @@
                     <p class="mb-0 text-light-opacity" style="font-size: 14px;">&copy; 2026 Revoxon Industries Pvt. Ltd. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="career.php" class="me-3 text-decoration-none" style="font-size: 14px; color: #7FBEFF !important;">Careers</a>
                     <a href="about.php" class="me-3 text-decoration-none" style="font-size: 14px;">Privacy Policy</a>
                     <a href="about.php" class="text-decoration-none" style="font-size: 14px;">Terms of Service</a>
                 </div>
@@ -294,5 +295,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = quoteForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+
+                    const formData = new FormData();
+                    formData.append('form_type', 'quote');
+                    formData.append('quoteName', document.getElementById('quoteName').value);
+                    formData.append('quotePhone', document.getElementById('quotePhone').value);
+                    formData.append('quoteProduct', document.getElementById('quoteProduct').value);
+                    formData.append('quoteMessage', document.getElementById('quoteMessage').value);
+
+                    fetch('send-mail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            alert(data.message);
+                            quoteForm.reset();
+                            const modalEl = document.getElementById('quoteModal');
+                            const modal = bootstrap.Modal.getInstance(modalEl);
+                            if (modal) modal.hide();
+                        } else {
+                            alert('Error: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Something went wrong. Please try again.');
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

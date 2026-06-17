@@ -100,6 +100,9 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
                                 <a class="nav-link <?php echo ($currentPage == 'gallery.php') ? 'active' : ''; ?>" href="gallery.php">Gallery</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link <?php echo ($currentPage == 'career.php') ? 'active' : ''; ?>" href="career.php">Careers</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link <?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>" href="contact.php">Contact</a>
                             </li>
                         </ul>

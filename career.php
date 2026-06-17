@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $page_title = "Careers | Revoxon Industries Pvt. Ltd.";
 $page_description = "Join the Revoxon team. Explore career opportunities and be part of India's leading pipe manufacturing company.";
 include 'header.php';
@@ -95,18 +95,4 @@ include 'header.php';
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-secondary-color text-white pt-5 pb-3">
-        <div class="container text-center">
-            <p class="mb-0 text-light-opacity">&copy; 2026 Revoxon Industries Pvt. Ltd. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
-
-
-
-
+    <?php include 'footer.php'; ?>

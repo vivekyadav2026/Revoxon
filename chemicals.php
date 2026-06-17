@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $page_title = "Construction Chemicals | Revoxon Industries Pvt. Ltd.";
 $page_description = "Learn about Revoxon Industries Pvt. Ltd., our vision, mission, and our journey as a leading manufacturer of PVC and UPVC pipes in India.";
 include 'header.php';
@@ -23,7 +23,7 @@ include 'header.php';
         <div class="container py-4">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
-                    <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" class="img-fluid rounded shadow w-100 object-fit-cover" style="height: 400px;" alt="Construction Chemicals">
+                    <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" class="img-fluid rounded shadow w-100" alt="Construction Chemicals">
                 </div>
                 <div class="col-lg-6 animate-on-scroll delay-1">
                     <h2 class="fw-bold text-secondary-color mb-3">Construction Chemicals</h2>
@@ -44,10 +44,10 @@ include 'header.php';
                     <h3 class="fw-bold text-secondary-color mb-4">Product Showcase</h3>
                 </div>
                 <div class="col-md-6 animate-on-scroll">
-                    <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="Construction Chemicals Showcase 1">
+                    <img src="assets/images/product_with_company_name/chemicals_branded.jpeg" class="img-fluid rounded shadow-sm w-100" alt="Construction Chemicals Showcase 1">
                 </div>
                 <div class="col-md-6 animate-on-scroll delay-1">
-                    <img src="assets/images/product_with_company_name/chemicals_grid_branded.jpeg" class="img-fluid rounded shadow-sm w-100 object-fit-cover" style="height: 300px;" alt="Construction Chemicals Showcase 2">
+                    <img src="assets/images/product_with_company_name/chemicals_grid_branded.jpeg" class="img-fluid rounded shadow-sm w-100" alt="Construction Chemicals Showcase 2">
                 </div>
             </div>
         </div>
@@ -88,8 +88,8 @@ include 'header.php';
                                                 <th>Grout Type</th>
                                                 <th>Size</th>
                                                 <th>Box Packing</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -98,28 +98,28 @@ include 'header.php';
                                                 <td rowspan="2" class="align-middle"><strong>Epoxy Grout 2 Part</strong></td>
                                                 <td>1 KG</td>
                                                 <td>8 Pcs</td>
-                                                <td>₹550.00</td>
-                                                <td>₹1,250.00</td>
+                                                <td>?550.00</td>
+                                                <td>?1,250.00</td>
                                             </tr>
                                             <tr>
                                                 <td>5 KG</td>
                                                 <td>4 Pcs</td>
-                                                <td>₹2,250.00</td>
-                                                <td>₹4,500.00</td>
+                                                <td>?2,250.00</td>
+                                                <td>?4,500.00</td>
                                             </tr>
                                             <!-- Dazzal 2 Part -->
                                             <tr class="border-top">
                                                 <td rowspan="2" class="align-middle"><strong>Epoxy Grout 2 Part Dazzal</strong></td>
                                                 <td>1 KG</td>
                                                 <td>8 Pcs</td>
-                                                <td>₹615.00</td>
-                                                <td>₹1,430.00</td>
+                                                <td>?615.00</td>
+                                                <td>?1,430.00</td>
                                             </tr>
                                             <tr>
                                                 <td>5 KG</td>
                                                 <td>4 Pcs</td>
-                                                <td>₹2,650.00</td>
-                                                <td>₹4,815.00</td>
+                                                <td>?2,650.00</td>
+                                                <td>?4,815.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -146,8 +146,8 @@ include 'header.php';
                                                 <th>Grout Type</th>
                                                 <th>Size</th>
                                                 <th>Box Packing</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -156,28 +156,28 @@ include 'header.php';
                                                 <td rowspan="2" class="align-middle"><strong>Epoxy Grout 3 Part</strong></td>
                                                 <td>1 KG</td>
                                                 <td>8 Pcs</td>
-                                                <td>₹455.00</td>
-                                                <td>₹1,050.00</td>
+                                                <td>?455.00</td>
+                                                <td>?1,050.00</td>
                                             </tr>
                                             <tr>
                                                 <td>5 KG</td>
                                                 <td>4 Pcs</td>
-                                                <td>₹1,750.00</td>
-                                                <td>₹4,150.00</td>
+                                                <td>?1,750.00</td>
+                                                <td>?4,150.00</td>
                                             </tr>
                                             <!-- Dazzal 3 Part -->
                                             <tr class="border-top">
                                                 <td rowspan="2" class="align-middle"><strong>Epoxy Grout 3 Part Dazzal</strong></td>
                                                 <td>1 KG</td>
                                                 <td>8 Pcs</td>
-                                                <td>₹515.00</td>
-                                                <td>₹1,150.00</td>
+                                                <td>?515.00</td>
+                                                <td>?1,150.00</td>
                                             </tr>
                                             <tr>
                                                 <td>5 KG</td>
                                                 <td>4 Pcs</td>
-                                                <td>₹2,050.00</td>
-                                                <td>₹4,350.00</td>
+                                                <td>?2,050.00</td>
+                                                <td>?4,350.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -203,14 +203,14 @@ include 'header.php';
                                             <tr>
                                                 <th>Size</th>
                                                 <th>Box Packing</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>1 KG</strong></td><td>10 Pcs</td><td>₹32.00</td><td>₹105.00</td></tr>
-                                            <tr><td><strong>5 KG</strong></td><td>4 Pcs</td><td>₹150.00</td><td>₹625.00</td></tr>
-                                            <tr><td><strong>10 KG</strong></td><td>1 Pc</td><td>₹290.00</td><td>₹1,150.00</td></tr>
+                                            <tr><td><strong>1 KG</strong></td><td>10 Pcs</td><td>?32.00</td><td>?105.00</td></tr>
+                                            <tr><td><strong>5 KG</strong></td><td>4 Pcs</td><td>?150.00</td><td>?625.00</td></tr>
+                                            <tr><td><strong>10 KG</strong></td><td>1 Pc</td><td>?290.00</td><td>?1,150.00</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -240,13 +240,13 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>20 KG</strong></td><td>₹212.00</td><td>₹425.00</td></tr>
-                                            <tr><td><strong>50 KG</strong></td><td>₹510.00</td><td>—</td></tr>
+                                            <tr><td><strong>20 KG</strong></td><td>?212.00</td><td>?425.00</td></tr>
+                                            <tr><td><strong>50 KG</strong></td><td>?510.00</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -270,13 +270,13 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>20 KG</strong></td><td>₹290.00</td><td>₹610.00</td></tr>
-                                            <tr><td><strong>50 KG</strong></td><td>₹710.00</td><td>—</td></tr>
+                                            <tr><td><strong>20 KG</strong></td><td>?290.00</td><td>?610.00</td></tr>
+                                            <tr><td><strong>50 KG</strong></td><td>?710.00</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -300,15 +300,15 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Type / Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>20 KG GREY</strong></td><td>₹390.00</td><td>₹820.00</td></tr>
-                                            <tr><td><strong>50 KG GREY</strong></td><td>₹975.00</td><td>—</td></tr>
-                                            <tr><td><strong>20 KG WHITE</strong></td><td>₹480.00</td><td>₹900.00</td></tr>
-                                            <tr><td><strong>50 KG WHITE</strong></td><td>₹1,200.00</td><td>—</td></tr>
+                                            <tr><td><strong>20 KG GREY</strong></td><td>?390.00</td><td>?820.00</td></tr>
+                                            <tr><td><strong>50 KG GREY</strong></td><td>?975.00</td><td>�</td></tr>
+                                            <tr><td><strong>20 KG WHITE</strong></td><td>?480.00</td><td>?900.00</td></tr>
+                                            <tr><td><strong>50 KG WHITE</strong></td><td>?1,200.00</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -332,15 +332,15 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Type / Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>20 KG GREY</strong></td><td>₹550.00</td><td>₹960.00</td></tr>
-                                            <tr><td><strong>50 KG GREY</strong></td><td>₹1,375.00</td><td>—</td></tr>
-                                            <tr><td><strong>20 KG WHITE</strong></td><td>₹650.00</td><td>₹1,030.00</td></tr>
-                                            <tr><td><strong>50 KG WHITE</strong></td><td>₹1,625.00</td><td>—</td></tr>
+                                            <tr><td><strong>20 KG GREY</strong></td><td>?550.00</td><td>?960.00</td></tr>
+                                            <tr><td><strong>50 KG GREY</strong></td><td>?1,375.00</td><td>�</td></tr>
+                                            <tr><td><strong>20 KG WHITE</strong></td><td>?650.00</td><td>?1,030.00</td></tr>
+                                            <tr><td><strong>50 KG WHITE</strong></td><td>?1,625.00</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -364,13 +364,13 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Type / Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>20 KG GREY</strong></td><td>₹490.00</td><td>₹980.00</td></tr>
-                                            <tr><td><strong>50 KG GREY</strong></td><td>₹1,225.00</td><td>—</td></tr>
+                                            <tr><td><strong>20 KG GREY</strong></td><td>?490.00</td><td>?980.00</td></tr>
+                                            <tr><td><strong>50 KG GREY</strong></td><td>?1,225.00</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -399,14 +399,14 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                                 <th>Box Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>1 LTR</strong></td><td>₹145.00</td><td>₹200.00</td><td>50 Pcs</td></tr>
-                                            <tr><td><strong>5 LTR</strong></td><td>₹690.00</td><td>₹900.00</td><td>30 Pcs</td></tr>
+                                            <tr><td><strong>1 LTR</strong></td><td>?145.00</td><td>?200.00</td><td>50 Pcs</td></tr>
+                                            <tr><td><strong>5 LTR</strong></td><td>?690.00</td><td>?900.00</td><td>30 Pcs</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -430,16 +430,16 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                                 <th>Box Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>1 LTR</strong></td><td>₹98.00</td><td>₹180.00</td><td>8 Pcs</td></tr>
-                                            <tr><td><strong>5 LTR</strong></td><td>₹410.00</td><td>₹900.00</td><td>4 Pcs</td></tr>
-                                            <tr><td><strong>20 LTR</strong></td><td>₹1,335.00</td><td>₹3,200.00</td><td>1 Pc</td></tr>
-                                            <tr><td><strong>200 LTR</strong></td><td>₹32,865.00</td><td>N/A</td><td>1 Pc</td></tr>
+                                            <tr><td><strong>1 LTR</strong></td><td>?98.00</td><td>?180.00</td><td>8 Pcs</td></tr>
+                                            <tr><td><strong>5 LTR</strong></td><td>?410.00</td><td>?900.00</td><td>4 Pcs</td></tr>
+                                            <tr><td><strong>20 LTR</strong></td><td>?1,335.00</td><td>?3,200.00</td><td>1 Pc</td></tr>
+                                            <tr><td><strong>200 LTR</strong></td><td>?32,865.00</td><td>N/A</td><td>1 Pc</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -463,22 +463,22 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                                 <th>Box Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>100 ML</strong></td><td>₹45.00</td><td>₹120.00</td><td>50 Pcs</td></tr>
-                                            <tr><td><strong>200 ML</strong></td><td>₹80.00</td><td>₹200.00</td><td>30 Pcs</td></tr>
-                                            <tr><td><strong>250 ML</strong></td><td>₹47.00</td><td>₹150.00</td><td>24 Pcs</td></tr>
-                                            <tr><td><strong>500 ML</strong></td><td>₹97.00</td><td>₹250.00</td><td>12 Pcs</td></tr>
-                                            <tr><td><strong>1 LTR</strong></td><td>₹198.00</td><td>₹400.00</td><td>8 Pcs</td></tr>
-                                            <tr><td><strong>5 LTR</strong></td><td>₹967.00</td><td>₹1,900.00</td><td>4 Pcs</td></tr>
-                                            <tr><td><strong>10 LTR</strong></td><td>₹1,864.00</td><td>₹3,500.00</td><td>1 Pc</td></tr>
-                                            <tr><td><strong>20 LTR</strong></td><td>₹3,658.00</td><td>₹6,500.00</td><td>1 Pc</td></tr>
-                                            <tr><td><strong>50 LTR</strong></td><td>₹8,850.00</td><td>N/A</td><td>—</td></tr>
-                                            <tr><td><strong>200 LTR</strong></td><td>₹32,922.00</td><td>N/A</td><td>—</td></tr>
+                                            <tr><td><strong>100 ML</strong></td><td>?45.00</td><td>?120.00</td><td>50 Pcs</td></tr>
+                                            <tr><td><strong>200 ML</strong></td><td>?80.00</td><td>?200.00</td><td>30 Pcs</td></tr>
+                                            <tr><td><strong>250 ML</strong></td><td>?47.00</td><td>?150.00</td><td>24 Pcs</td></tr>
+                                            <tr><td><strong>500 ML</strong></td><td>?97.00</td><td>?250.00</td><td>12 Pcs</td></tr>
+                                            <tr><td><strong>1 LTR</strong></td><td>?198.00</td><td>?400.00</td><td>8 Pcs</td></tr>
+                                            <tr><td><strong>5 LTR</strong></td><td>?967.00</td><td>?1,900.00</td><td>4 Pcs</td></tr>
+                                            <tr><td><strong>10 LTR</strong></td><td>?1,864.00</td><td>?3,500.00</td><td>1 Pc</td></tr>
+                                            <tr><td><strong>20 LTR</strong></td><td>?3,658.00</td><td>?6,500.00</td><td>1 Pc</td></tr>
+                                            <tr><td><strong>50 LTR</strong></td><td>?8,850.00</td><td>N/A</td><td>�</td></tr>
+                                            <tr><td><strong>200 LTR</strong></td><td>?32,922.00</td><td>N/A</td><td>�</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -502,14 +502,14 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size</th>
-                                                <th>Rate (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate (?)</th>
+                                                <th>M.R.P. (?)</th>
                                                 <th>Box Packing</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>1 KG</strong></td><td>₹395.00</td><td>₹800.00</td><td>8 Pcs</td></tr>
-                                            <tr><td><strong>5 KG</strong></td><td>₹1,910.00</td><td>₹3,300.00</td><td>4 Pcs</td></tr>
+                                            <tr><td><strong>1 KG</strong></td><td>?395.00</td><td>?800.00</td><td>8 Pcs</td></tr>
+                                            <tr><td><strong>5 KG</strong></td><td>?1,910.00</td><td>?3,300.00</td><td>4 Pcs</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -528,7 +528,7 @@ include 'header.php';
                             <div class="card-header bg-white py-3 border-bottom d-flex flex-wrap justify-content-between align-items-center">
                                 <div>
                                     <h5 class="fw-bold text-primary-color mb-1">Tile Spacers</h5>
-                                    <p class="small text-muted mb-0">Precision plastic spacers for uniform grout joints — HSN: 392690</p>
+                                    <p class="small text-muted mb-0">Precision plastic spacers for uniform grout joints � HSN: 392690</p>
                                 </div>
                                 <span class="badge bg-slate-light text-navy-dark border px-2 py-1 mt-1 mt-sm-0" style="border-radius: 6px;">Tile Accessories</span>
                             </div>
@@ -538,20 +538,20 @@ include 'header.php';
                                         <thead class="table-light">
                                             <tr>
                                                 <th>Size (MM)</th>
-                                                <th>Rate per Packet (₹)</th>
-                                                <th>M.R.P. (₹)</th>
+                                                <th>Rate per Packet (?)</th>
+                                                <th>M.R.P. (?)</th>
                                                 <th>Std. Packing (Pcs / Packet)</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr><td><strong>1.5 MM</strong></td><td>₹30.00</td><td>₹110.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>2 MM</strong></td><td>₹32.00</td><td>₹110.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>3 MM</strong></td><td>₹35.00</td><td>₹110.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>4 MM</strong></td><td>₹40.00</td><td>₹110.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>5 MM</strong></td><td>₹45.00</td><td>₹120.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>6 MM</strong></td><td>₹70.00</td><td>₹135.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>8 MM</strong></td><td>₹90.00</td><td>₹150.00</td><td>1000 Pcs</td></tr>
-                                            <tr><td><strong>10 MM</strong></td><td>₹110.00</td><td>₹210.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>1.5 MM</strong></td><td>?30.00</td><td>?110.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>2 MM</strong></td><td>?32.00</td><td>?110.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>3 MM</strong></td><td>?35.00</td><td>?110.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>4 MM</strong></td><td>?40.00</td><td>?110.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>5 MM</strong></td><td>?45.00</td><td>?120.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>6 MM</strong></td><td>?70.00</td><td>?135.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>8 MM</strong></td><td>?90.00</td><td>?150.00</td><td>1000 Pcs</td></tr>
+                                            <tr><td><strong>10 MM</strong></td><td>?110.00</td><td>?210.00</td><td>1000 Pcs</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -566,141 +566,4 @@ include 'header.php';
 
     <?php include 'terms-conditions.php'; ?>
 
-    <!-- Footer -->
-    <footer class="footer bg-secondary-color text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <div class="mb-4">
-                        <img src="assets/images/logo/logo.jpeg" alt="Revoxon Logo" style="height: 60px; border-radius: 4px;">
-                    </div>
-                    <p class="text-light-opacity">A leading manufacturer of PVC, UPVC, CPVC, and SWR pipes in India. Delivering premium quality for agricultural, industrial, and residential needs.</p>
-                    <a href="#" class="btn btn-accent-custom mt-2"><i class="fas fa-download me-2"></i>Download Catalogue</a>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-4 text-white">Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="facility.php">Manufacturing Facility</a></li>
-                        <li><a href="certifications.php">Certifications</a></li>
-                        <li><a href="dealers.php">Dealer Program</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-4 text-white">Products</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="agriculture-pipes.php">Agriculture Pipes</a></li>
-                        <li><a href="upvc-pipes.php">UPVC Plumbing Pipes</a></li>
-                        <li><a href="cpvc-pipes.php">CPVC Pipes</a></li>
-                        <li><a href="swr-pipes.php">SWR Drainage Pipes</a></li>
-                        <li><a href="chemicals.php">Construction Chemicals</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-4 text-white">Contact Info</h5>
-                    <ul class="list-unstyled contact-info">
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
-                            <span class="text-light-opacity">338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
-                            <div>
-                                <a href="tel:+919825706253" class="text-light-opacity text-decoration-none d-block mb-1">+91 98257 06253</a>
-                                <a href="tel:+919460861021" class="text-light-opacity text-decoration-none d-block mb-1">+91 94608 61021</a>
-                                <a href="tel:+918200945366" class="text-light-opacity text-decoration-none d-block">+91 82009 45366</a>
-                            </div>
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-envelope text-accent me-3 mt-1"></i>
-                            <a href="mailto:info@revoxon.com" class="text-light-opacity text-decoration-none">info@revoxon.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary">
-            <div class="row align-items-center mt-3">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-light-opacity">&copy; 2026 Revoxon Industries Pvt. Ltd. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <a href="#" class="text-light-opacity me-3 text-decoration-none">Privacy Policy</a>
-                    <a href="#" class="text-light-opacity text-decoration-none">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating CTAs -->
-    <a href="https://wa.me/919825706253" class="floating-whatsapp" target="_blank" title="Chat With Our Pipe Expert">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="tel:+919825706253" class="floating-call d-flex d-lg-none" title="Call Now">
-        <i class="fas fa-phone-alt"></i>
-    </a>
-
-    <!-- Sticky Mobile Bottom Bar -->
-    <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top">
-        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark">
-            <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
-        </a>
-        <a href="https://wa.me/919825706253" class="text-center text-decoration-none text-dark">
-            <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
-        </a>
-        <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal">
-            <i class="fas fa-envelope-open-text d-block fs-5 text-accent mb-1"></i> Get Quote
-        </a>
-    </div>
-
-    <!-- Quote Modal -->
-    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary-color text-white">
-                    <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="quoteForm">
-                        <div class="mb-3">
-                            <label for="quoteName" class="form-label">Name / Company</label>
-                            <input type="text" class="form-control" id="quoteName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="quotePhone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="quotePhone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="quoteProduct" class="form-label">Interested Product</label>
-                            <select class="form-select" id="quoteProduct">
-                                <option value="Agriculture Pipes">Agriculture Pipes</option>
-                                <option value="UPVC Pipes">UPVC Pipes</option>
-                                <option value="CPVC Pipes">CPVC Pipes</option>
-                                <option value="SWR Pipes">SWR Pipes</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="quoteMessage" class="form-label">Message</label>
-                            <textarea class="form-control" id="quoteMessage" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary-custom w-100">Submit Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
-
-
-
-
-
-
+    <?php include 'footer.php'; ?>

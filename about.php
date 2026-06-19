@@ -103,7 +103,7 @@ include 'header.php';
                                 <div class="col-md-5 col-lg-4">
                                     <div class="chairman-photo-wrap">
                                         <img src="assets/images/chairman.jpg" class="img-fluid w-100" alt="Rasikbhai G. Patel - Chairman">
-                                        <div class="chairman-badge">Founder & Chairman</div>
+                                        <div class="chairman-badge">Chairman</div>
                                     </div>
                                 </div>
                                 <div class="col-md-7 col-lg-8">

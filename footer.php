@@ -203,7 +203,7 @@
                         <div class="col-md-4 text-center">
                             <img src="assets/images/chairman.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Rasikbhai G. Patel" style="max-height: 250px; object-fit: cover;">
                             <h5 class="fw-bold mt-3 text-secondary-color mb-0" style="font-size: 1.15rem;">Rasikbhai G. Patel</h5>
-                            <p class="text-accent small fw-bold mb-0">Founder & Chairman</p>
+                            <p class="text-accent small fw-bold mb-0">Chairman</p>
                         </div>
                         <div class="col-md-8">
                             <div class="border-start border-primary border-4 ps-3 mb-3">

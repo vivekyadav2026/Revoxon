@@ -1214,6 +1214,15 @@ foreach ($enquiries as $enq) {
             backdrop.addEventListener('click', closeSidebar);
         }
 
+        // Auto-dismiss sidebar on mobile link click
+        document.querySelectorAll('#v-pills-tab .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    closeSidebar();
+                }
+            });
+        });
+
         // View Job modal mapping
         document.querySelectorAll('.view-job-btn').forEach(btn => {
             btn.addEventListener('click', function() {

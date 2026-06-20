@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/settings_loader.php';
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
 ?>
 <!DOCTYPE html>
@@ -24,20 +25,20 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="<?php echo ($currentPage == 'index.php') ? 'home-page' : ''; ?>">
-
+ 
     <!-- Topbar -->
     <div class="topbar-utility d-none d-lg-block bg-slate-light border-bottom py-1">
         <div class="container-fluid px-xl-5 px-3">
             <div class="row align-items-center">
                 <div class="col-md-6 text-start">
-                    <span class="me-4"><i class="fas fa-envelope text-primary-color me-2"></i><a href="mailto:info@revoxon.com" class="text-decoration-none">info@revoxon.com</a></span>
-                    <span><i class="fas fa-phone-alt text-primary-color me-2"></i><a href="tel:+919825706253" class="text-decoration-none">+91 98257 06253 / +91 94608 61021 / +91 82009 45366</a></span>
+                    <span class="me-4"><i class="fas fa-envelope text-primary-color me-2"></i><a href="mailto:<?php echo htmlspecialchars($settings['email']); ?>" class="text-decoration-none"><?php echo htmlspecialchars($settings['email']); ?></a></span>
+                    <span><i class="fas fa-phone-alt text-primary-color me-2"></i><a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone1'])); ?>" class="text-decoration-none"><?php echo htmlspecialchars($settings['phone1'] . ' / ' . $settings['phone2'] . ' / ' . $settings['phone3']); ?></a></span>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="#" class="topbar-social-link me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="topbar-social-link me-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="topbar-social-link me-3"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="topbar-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['facebook']); ?>" class="topbar-social-link me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['twitter']); ?>" class="topbar-social-link me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['linkedin']); ?>" class="topbar-social-link me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="<?php echo htmlspecialchars($settings['instagram']); ?>" class="topbar-social-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>

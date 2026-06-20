@@ -34,30 +34,30 @@ include 'header.php';
                             </div>
                             <div>
                                 <h5 class="fw-bold text-secondary-color mb-1">Head Office & Works</h5>
-                                <p class="text-muted mb-0">338/01, Majara Chokdi, NH-48,<br>Vill &amp; Ta &ndash; Tajpur, Prantij, Sabarkantha, Gujarat - 383205</p>
+                                <p class="text-muted mb-0"><?php echo htmlspecialchars($settings['address']); ?></p>
                             </div>
                         </div>
 
-                                                <div class="d-flex align-items-start mb-4">
+                        <div class="d-flex align-items-start mb-4">
                             <div class="bg-light-custom p-3 rounded-circle me-3 text-center" style="width: 60px; height: 60px;">
                                 <i class="fas fa-phone-alt fs-4 text-primary-color"></i>
                             </div>
                             <div>
                                 <h5 class="fw-bold text-secondary-color mb-1">Phone Number</h5>
-                                <a href="tel:+919825706253" class="text-muted text-decoration-none d-block mb-1">+91 98257 06253</a>
-                                <a href="tel:+919460861021" class="text-muted text-decoration-none d-block mb-1">+91 94608 61021</a>
-                                <a href="tel:+918200945366" class="text-muted text-decoration-none d-block">+91 82009 45366</a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone1'])); ?>" class="text-muted text-decoration-none d-block mb-1"><?php echo htmlspecialchars($settings['phone1']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone2'])); ?>" class="text-muted text-decoration-none d-block mb-1"><?php echo htmlspecialchars($settings['phone2']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone3'])); ?>" class="text-muted text-decoration-none d-block"><?php echo htmlspecialchars($settings['phone3']); ?></a>
                             </div>
                         </div>
 
-                                                <div class="d-flex align-items-start mb-4">
+                        <div class="d-flex align-items-start mb-4">
                             <div class="bg-light-custom p-3 rounded-circle me-3 text-center" style="width: 60px; height: 60px;">
                                 <i class="fas fa-envelope fs-4 text-primary-color"></i>
                             </div>
                             <div>
                                 <h5 class="fw-bold text-secondary-color mb-1">Email Address</h5>
-                                <a href="mailto:info@revoxon.com" class="text-muted text-decoration-none d-block mb-1">info@revoxon.com</a>
-                                <a href="mailto:sales@revoxon.com" class="text-muted text-decoration-none d-block">sales@revoxon.com</a>
+                                <a href="mailto:<?php echo htmlspecialchars($settings['email']); ?>" class="text-muted text-decoration-none d-block mb-1"><?php echo htmlspecialchars($settings['email']); ?></a>
+                                <a href="mailto:<?php echo htmlspecialchars($settings['email_sales']); ?>" class="text-muted text-decoration-none d-block"><?php echo htmlspecialchars($settings['email_sales']); ?></a>
                             </div>
                         </div>
                     </div>

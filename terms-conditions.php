@@ -13,23 +13,23 @@
                             <i class="fas fa-map-marker-alt text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Registered Address</span>
-                                <span class="text-muted small">338/01, Majara Chokdi, NH-48,<br>Vill &amp; Ta &ndash; Tajpur, Prantij,<br>Sabarkantha, Gujarat - 383205</span>
+                                <span class="text-muted small"><?php echo htmlspecialchars($settings['address']); ?></span>
                             </div>
                         </li>
                         <li class="d-flex mb-3 align-items-start">
                             <i class="fas fa-phone-alt text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Call Us</span>
-                                <a href="tel:+919825706253" class="text-muted small text-decoration-none d-block mb-1">+91 98257 06253</a>
-                                <a href="tel:+919460861021" class="text-muted small text-decoration-none d-block mb-1">+91 94608 61021</a>
-                                <a href="tel:+918200945366" class="text-muted small text-decoration-none d-block">+91 82009 45366</a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone1'])); ?>" class="text-muted small text-decoration-none d-block mb-1"><?php echo htmlspecialchars($settings['phone1']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone2'])); ?>" class="text-muted small text-decoration-none d-block mb-1"><?php echo htmlspecialchars($settings['phone2']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone3'])); ?>" class="text-muted small text-decoration-none d-block"><?php echo htmlspecialchars($settings['phone3']); ?></a>
                             </div>
                         </li>
                         <li class="d-flex align-items-start">
                             <i class="fas fa-envelope text-primary-color fs-5 me-3 mt-1"></i>
                             <div>
                                 <span class="d-block fw-bold text-secondary-color">Email Support</span>
-                                <a href="mailto:info@revoxon.com" class="text-muted small text-decoration-none d-block">info@revoxon.com</a>
+                                <a href="mailto:<?php echo htmlspecialchars($settings['email']); ?>" class="text-muted small text-decoration-none d-block"><?php echo htmlspecialchars($settings['email']); ?></a>
                             </div>
                         </li>
                     </ul>

@@ -16,17 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Quote Form Submission (Prevent default for demo)
-    const quoteForm = document.getElementById('quoteForm');
-    if(quoteForm) {
-        quoteForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you! Your quote request has been submitted. Our team will contact you shortly.');
-            const modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
-            modal.hide();
-            quoteForm.reset();
-        });
-    }
+
 
     // Animation on Scroll Setup (Simple Intersection Observer)
     const animateElements = document.querySelectorAll('.animate-on-scroll');

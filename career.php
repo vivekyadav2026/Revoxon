@@ -2,6 +2,17 @@
 $page_title = "Careers | Revoxon Industries Pvt. Ltd.";
 $page_description = "Join the Revoxon team. Explore career opportunities and be part of India's leading pipe manufacturing company.";
 include 'header.php';
+
+// Fetch active jobs from database
+require_once __DIR__ . '/admin/db.php';
+$active_jobs = [];
+try {
+    $stmt = $db->prepare("SELECT * FROM jobs WHERE status = 'active' ORDER BY created_at DESC");
+    $stmt->execute();
+    $active_jobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    // Silent fail
+}
 ?>
 
 <main>
@@ -103,10 +114,66 @@ include 'header.php';
     </section>
 
     <!-- Openings Section -->
-    <section class="py-5 bg-white position-relative">
-        <div class="container py-5">
+    <section class="py-5 bg-white position-relative border-bottom">
+        <div class="container py-4">
             <div class="text-center mb-5 animate-on-scroll">
-                <h6 class="text-accent fw-bold text-uppercase tracking-wider mb-2">Join Us</h6>
+                <h6 class="text-accent fw-bold text-uppercase tracking-wider mb-2">Current Openings</h6>
+                <h2 class="display-6 fw-bold text-secondary-color">Explore Opportunities</h2>
+                <p class="text-muted mx-auto mt-2" style="max-width: 600px;">Join our growing team and work on premium manufacturing and operations.</p>
+                <div class="mx-auto bg-accent mt-3" style="width: 60px; height: 3px; border-radius: 2px;"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <?php if (count($active_jobs) === 0): ?>
+                        <div class="text-center py-5 bg-light-custom rounded-4 border animate-on-scroll">
+                            <i class="fas fa-briefcase fs-1 text-muted mb-3"></i>
+                            <h5 class="fw-bold text-secondary-color">No Active Openings</h5>
+                            <p class="text-muted mb-0">We don't have any active openings right now, but feel free to submit your resume below for future opportunities.</p>
+                        </div>
+                    <?php else: ?>
+                        <div class="accordion accordion-custom animate-on-scroll" id="jobsAccordion">
+                            <?php foreach ($active_jobs as $index => $job): ?>
+                                <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden" style="background-color: #f8fafc;">
+                                    <h2 class="accordion-header" id="headingJob<?php echo $job['id']; ?>">
+                                        <button class="accordion-button collapsed px-4 py-3 fw-bold text-secondary-color bg-transparent border-0 shadow-none d-flex align-items-center justify-content-between flex-wrap gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJob<?php echo $job['id']; ?>" aria-expanded="false" aria-controls="collapseJob<?php echo $job['id']; ?>">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="bg-primary-color text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-briefcase"></i>
+                                                </div>
+                                                <div class="text-start">
+                                                    <span class="fs-5 text-navy-dark d-block"><?php echo htmlspecialchars($job['title']); ?></span>
+                                                    <span class="small text-muted fw-normal"><i class="fas fa-map-marker-alt me-1 text-accent"></i><?php echo htmlspecialchars($job['location']); ?> &bull; <i class="fas fa-clock me-1 text-accent"></i><?php echo htmlspecialchars($job['type']); ?></span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-3 me-3 ms-auto">
+                                                <span class="badge bg-secondary-subtle text-secondary rounded-pill px-3 py-1.5 font-monospace" style="font-size: 0.8rem;"><?php echo htmlspecialchars($job['experience']); ?> Exp</span>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseJob<?php echo $job['id']; ?>" class="accordion-collapse collapse" aria-labelledby="headingJob<?php echo $job['id']; ?>" data-bs-parent="#jobsAccordion">
+                                        <div class="accordion-body px-4 pb-4 pt-0 bg-white text-muted">
+                                            <hr class="mt-0 mb-3">
+                                            <h6 class="fw-bold text-dark mb-2"><i class="fas fa-info-circle text-primary-color me-2"></i>Job Description</h6>
+                                            <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 0.95rem; white-space: pre-line;"><?php echo htmlspecialchars($job['description']); ?></p>
+                                            
+                                            <h6 class="fw-bold text-dark mb-2"><i class="fas fa-list-check text-primary-color me-2"></i>Requirements & Qualifications</h6>
+                                            <p class="mb-4 text-justify" style="line-height: 1.7; font-size: 0.95rem; white-space: pre-line;"><?php echo htmlspecialchars($job['requirements']); ?></p>
+                                            
+                                            <div class="text-end">
+                                                <button class="btn btn-primary-custom btn-sm px-4 py-2 rounded-3 apply-job-btn" data-department="<?php echo htmlspecialchars($job['department']); ?>"><i class="fas fa-paper-plane me-2"></i>Apply for this Role</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Submit Profile Section -->
     <section class="py-5 bg-white position-relative">
         <div class="container py-5">
@@ -188,6 +255,35 @@ include 'header.php';
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Apply Job button click handler
+    document.querySelectorAll('.apply-job-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const dept = this.getAttribute('data-department');
+            const deptSelect = document.getElementById('careerDept');
+            const appForm = document.getElementById('careerApplicationForm');
+            
+            if (deptSelect) {
+                let matched = false;
+                for (let i = 0; i < deptSelect.options.length; i++) {
+                    if (deptSelect.options[i].value === dept) {
+                        deptSelect.selectedIndex = i;
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) {
+                    deptSelect.value = "Other";
+                }
+            }
+            
+            if (appForm) {
+                appForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const nameInput = document.getElementById('careerName');
+                if (nameInput) setTimeout(() => nameInput.focus(), 800);
+            }
+        });
+    });
+
     const careerForm = document.getElementById('careerApplicationForm');
     if(careerForm) {
         careerForm.addEventListener('submit', function(e) {

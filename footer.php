@@ -97,19 +97,19 @@
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fas fa-map-marker-alt text-accent me-3 mt-1"></i>
-                            <span>338/01, Majara Chokdi, NH-48, Vill & Ta – Tajpur, Prantij, Sabarkantha, Gujarat - 383205</span>
+                            <span><?php echo htmlspecialchars($settings['address']); ?></span>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fas fa-phone-alt text-accent me-3 mt-1"></i>
                             <div>
-                                <a href="tel:+919825706253" class="d-block mb-1">+91 98257 06253</a>
-                                <a href="tel:+919460861021" class="d-block mb-1">+91 94608 61021</a>
-                                <a href="tel:+918200945366" class="d-block">+91 82009 45366</a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone1'])); ?>" class="d-block mb-1"><?php echo htmlspecialchars($settings['phone1']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone2'])); ?>" class="d-block mb-1"><?php echo htmlspecialchars($settings['phone2']); ?></a>
+                                <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone3'])); ?>" class="d-block"><?php echo htmlspecialchars($settings['phone3']); ?></a>
                             </div>
                         </li>
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fas fa-envelope text-accent me-3 mt-1"></i>
-                            <a href="mailto:info@revoxon.com">info@revoxon.com</a>
+                            <a href="mailto:<?php echo htmlspecialchars($settings['email']); ?>"><?php echo htmlspecialchars($settings['email']); ?></a>
                         </li>
                     </ul>
                 </div>
@@ -129,16 +129,16 @@
     </footer>
 
     <!-- Floating CTAs (Desktop Only) -->
-    <a href="https://wa.me/919460861021" class="floating-whatsapp d-none d-lg-flex" target="_blank" title="Chat With Our Pipe Expert">
+    <a href="https://wa.me/91<?php echo htmlspecialchars($settings['whatsapp']); ?>" class="floating-whatsapp d-none d-lg-flex" target="_blank" title="Chat With Our Pipe Expert">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Sticky Mobile Bottom Bar -->
     <div class="mobile-bottom-bar d-lg-none d-flex justify-content-around bg-white shadow py-2 sticky-bottom border-top" style="z-index: 999;">
-        <a href="tel:+919825706253" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
+        <a href="tel:<?php echo htmlspecialchars(str_replace(' ', '', $settings['phone1'])); ?>" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
             <i class="fas fa-phone-alt d-block fs-5 text-primary-color mb-1"></i> Call Now
         </a>
-        <a href="https://wa.me/919460861021" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
+        <a href="https://wa.me/91<?php echo htmlspecialchars($settings['whatsapp']); ?>" class="text-center text-decoration-none text-dark" style="font-family: var(--font-body); font-size: 13px;">
             <i class="fab fa-whatsapp d-block fs-5 text-success mb-1"></i> WhatsApp
         </a>
         <a href="#" class="text-center text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#quoteModal" style="font-family: var(--font-body); font-size: 13px;">
@@ -325,8 +325,20 @@
                             alert(data.message);
                             quoteForm.reset();
                             const modalEl = document.getElementById('quoteModal');
-                            const modal = bootstrap.Modal.getInstance(modalEl);
-                            if (modal) modal.hide();
+                            if (window.bootstrap) {
+                                let modal = bootstrap.Modal.getInstance(modalEl);
+                                if (!modal) {
+                                    modal = new bootstrap.Modal(modalEl);
+                                }
+                                modal.hide();
+                            }
+                            // Clean up modal artifacts to prevent frozen background
+                            setTimeout(() => {
+                                document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+                                document.body.classList.remove('modal-open');
+                                document.body.style.overflow = '';
+                                document.body.style.paddingRight = '';
+                            }, 300);
                         } else {
                             alert('Error: ' + data.message);
                         }

@@ -2,11 +2,30 @@
 $page_title = "Photo Gallery | Revoxon Industries Pvt. Ltd.";
 $page_description = "Learn about Revoxon Industries Pvt. Ltd., our vision, mission, and our journey as a leading manufacturer of PVC and UPVC pipes in India.";
 include 'header.php';
+
+// Include database
+require_once __DIR__ . '/admin/db.php';
+
+// Fetch Brand Showcase Images
+try {
+    $stmt_brand = $db->query("SELECT * FROM gallery WHERE category = 'brand' ORDER BY id DESC");
+    $brand_items = $stmt_brand->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $brand_items = [];
+}
+
+// Fetch Plant & Infrastructure Images
+try {
+    $stmt_plant = $db->query("SELECT * FROM gallery WHERE category = 'plant' ORDER BY id DESC");
+    $plant_items = $stmt_plant->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $plant_items = [];
+}
 ?>
 
     <!-- Main Content -->
     <main>
-<section class="page-banner bg-primary-color text-white py-5 text-center" style="background: linear-gradient(rgba(10, 77, 162, 0.85), rgba(30, 41, 59, 0.9)), url('assets/images/banner1.png') center/cover;">
+    <section class="page-banner bg-primary-color text-white py-5 text-center" style="background: linear-gradient(rgba(10, 77, 162, 0.85), rgba(30, 41, 59, 0.9)), url('assets/images/banner1.png') center/cover;">
         <div class="container py-4">
             <h1 class="display-5 fw-bold animation-fade-up text-white">Our Photo Gallery</h1>
             <nav aria-label="breadcrumb" class="animation-fade-up delay-1">
@@ -17,6 +36,7 @@ include 'header.php';
             </nav>
         </div>
     </section>
+    
     <style>
     .gallery-card {
         position: relative;
@@ -80,46 +100,27 @@ include 'header.php';
                 <div class="tab-pane fade show active" id="brand-pane" role="tabpanel" aria-labelledby="brand-tab" tabindex="0">
                     <div class="row g-4">
                         <?php
-                        $brand_images = [
-                            "all_pipes_range_branded.jpeg" => "Revoxon Complete Pipes Range",
-                            "column_pipes_branded.jpeg" => "Revoxon Column Pipes",
-                            "hdpe_pipes_branded.jpeg" => "Revoxon HDPE Pipes",
-                            "cpvc_pipes_branded.jpeg" => "Revoxon CPVC Pipes",
-                            "upvc_pipes_branded.jpeg" => "Revoxon UPVC Pipes",
-                            "swr_pipes_branded.jpeg" => "Revoxon SWR Pipes",
-                            "agri_pipes_branded_2.jpeg" => "Revoxon Agriculture Pipes",
-                            "agri_pipes_branded.jpeg" => "Revoxon Agriculture Pipes Range",
-                            "all_products_branded.jpeg" => "Revoxon Complete Product Range",
-                            "swr_fittings_branded.jpeg" => "Revoxon SWR Fittings",
-                            "all_products_branded_2.jpeg" => "Revoxon All Products Collection",
-                            "cpvc_fittings_branded.jpeg" => "Revoxon CPVC Fittings",
-                            "upvc_fittings_branded.jpeg" => "Revoxon UPVC Fittings",
-                            "pvc_adhesive_branded.jpeg" => "Revoxon PVC Adhesive",
-                            "tshirt_navy_branded.jpeg" => "Revoxon Team Uniform",
-                            "tshirt_blue_branded.jpeg" => "Revoxon Brand Merchandise",
-                            "chemicals_branded.jpeg" => "Revoxon Construction Chemicals",
-                            "chemicals_branded_2.jpeg" => "Revoxon Chemicals Range",
-                            "chemicals_grid_branded.jpeg" => "Revoxon Chemical Products",
-                            "casing_pipes_branded.jpeg" => "Revoxon Casing Pipes",
-                            "casing_pipes_branded_2.jpeg" => "Revoxon Casing Pipes Range"
-                        ];
-
-                        $delay = 0;
-                        foreach ($brand_images as $filename => $title) {
-                            $img_path = "assets/images/product_with_company_name/" . $filename;
-                            ?>
-                            <div class="col-lg-4 col-md-6 animate-on-scroll" style="animation-delay: <?php echo $delay; ?>ms;">
-                                <div class="card border-0 shadow-sm overflow-hidden h-100 position-relative gallery-card">
-                                    <img src="<?php echo htmlspecialchars($img_path); ?>" class="img-fluid w-100 h-100" style="min-height: 280px; max-height: 280px; object-fit: contain !important; background: #f8fafc; padding: 15px; cursor: pointer; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" alt="<?php echo htmlspecialchars($title); ?>" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="document.getElementById('modalImage').src=this.src; document.getElementById('modalTitle').innerText=this.alt">
-                                    <div class="gallery-card-overlay">
-                                        <h5 class="text-white fw-bold mb-1"><?php echo htmlspecialchars($title); ?></h5>
-                                        <p class="text-accent small mb-0"><i class="fas fa-search-plus me-1"></i> Click to Zoom</p>
+                        if (count($brand_items) === 0): ?>
+                            <div class="col-12 text-center py-5 text-muted">No brand showcase images found.</div>
+                        <?php else:
+                            $delay = 0;
+                            foreach ($brand_items as $item) {
+                                // Add fallback prefix if it is a default asset or user upload
+                                $img_src = htmlspecialchars($item['image_path']);
+                                ?>
+                                <div class="col-lg-4 col-md-6 animate-on-scroll" style="animation-delay: <?php echo $delay; ?>ms;">
+                                    <div class="card border-0 shadow-sm overflow-hidden h-100 position-relative gallery-card">
+                                        <img src="<?php echo $img_src; ?>" class="img-fluid w-100 h-100" style="min-height: 280px; max-height: 280px; object-fit: contain !important; background: #f8fafc; padding: 15px; cursor: pointer; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" alt="<?php echo htmlspecialchars($item['title']); ?>" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="document.getElementById('modalImage').src=this.src; document.getElementById('modalTitle').innerText=this.alt">
+                                        <div class="gallery-card-overlay">
+                                            <h5 class="text-white fw-bold mb-1"><?php echo htmlspecialchars($item['title']); ?></h5>
+                                            <p class="text-accent small mb-0"><i class="fas fa-search-plus me-1"></i> Click to Zoom</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <?php
-                            $delay = ($delay + 50) % 300;
-                        }
+                                <?php
+                                $delay = ($delay + 50) % 300;
+                            }
+                        endif;
                         ?>
                     </div>
                 </div>
@@ -128,21 +129,26 @@ include 'header.php';
                 <div class="tab-pane fade" id="plant-pane" role="tabpanel" aria-labelledby="plant-tab" tabindex="0">
                     <div class="row g-4">
                         <?php
-                        $delay = 0;
-                        for ($i = 1; $i <= 45; $i++) {
-                            ?>
-                            <div class="col-lg-4 col-md-6 animate-on-scroll" style="animation-delay: <?php echo $delay; ?>ms;">
-                                <div class="card border-0 shadow-sm overflow-hidden h-100 position-relative gallery-card">
-                                    <img src="assets/images/gallery_<?php echo $i; ?>.jpeg" class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 280px; max-height: 280px; cursor: pointer; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" alt="Infrastructure Image <?php echo $i; ?>" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="document.getElementById('modalImage').src=this.src; document.getElementById('modalTitle').innerText=this.alt">
-                                    <div class="gallery-card-overlay">
-                                        <h5 class="text-white fw-bold mb-1">Infrastructure Glimpse <?php echo $i; ?></h5>
-                                        <p class="text-accent small mb-0"><i class="fas fa-search-plus me-1"></i> Click to Zoom</p>
+                        if (count($plant_items) === 0): ?>
+                            <div class="col-12 text-center py-5 text-muted">No plant or infrastructure images found.</div>
+                        <?php else:
+                            $delay = 0;
+                            foreach ($plant_items as $item) {
+                                $img_src = htmlspecialchars($item['image_path']);
+                                ?>
+                                <div class="col-lg-4 col-md-6 animate-on-scroll" style="animation-delay: <?php echo $delay; ?>ms;">
+                                    <div class="card border-0 shadow-sm overflow-hidden h-100 position-relative gallery-card">
+                                        <img src="<?php echo $img_src; ?>" class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 280px; max-height: 280px; cursor: pointer; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'" alt="<?php echo htmlspecialchars($item['title']); ?>" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="document.getElementById('modalImage').src=this.src; document.getElementById('modalTitle').innerText=this.alt">
+                                        <div class="gallery-card-overlay">
+                                            <h5 class="text-white fw-bold mb-1"><?php echo htmlspecialchars($item['title']); ?></h5>
+                                            <p class="text-accent small mb-0"><i class="fas fa-search-plus me-1"></i> Click to Zoom</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <?php
-                            $delay = ($delay + 50) % 300;
-                        }
+                                <?php
+                                $delay = ($delay + 50) % 300;
+                            }
+                        endif;
                         ?>
                     </div>
                 </div>
@@ -150,7 +156,7 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Gallery Modal (Lightbox) -->
+    <!-- Gallery Lightbox Modal -->
     <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content bg-transparent border-0">
@@ -164,6 +170,6 @@ include 'header.php';
         </div>
       </div>
     </div>
-</main></main>
+</main>
 
-    <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
